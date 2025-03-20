@@ -41,7 +41,7 @@ export default function Page() {
                                     <label htmlFor="" className="ml-1 text-[.8rem] md:text-[.9rem] text-white font-semibold absolute">Remember Me</label>    
                                 </div>
                                 <div className="md:-mt-[.4.5rem]">
-                                    <Link href="/" className="text-black font-semibold text-[.8rem] md:text-[.9rem]">Forgot Password?</Link>
+                                    <Link href="/forgot-password" className="text-black font-semibold text-[.8rem] md:text-[.9rem]">Forgot Password?</Link>
                                 </div>
                            </div>
                         </div>
