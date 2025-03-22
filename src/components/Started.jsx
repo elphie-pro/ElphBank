@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { easeOut, motion } from "framer-motion";
 import { useRef } from "react";
+import { ScrollAnimation } from "./SlideAnimation";
 
 export default function Page() {
   const variants = {
@@ -10,13 +11,13 @@ export default function Page() {
     show: { opacity: 1, transition: { staggerChildren: 0.25 } },
   };
   return (
-    <div className="bg-[#2EC4B6] w-full">
-      <div className="w-full block max-w-[100rem] mx-auto px-4 pb-12 md:pb-2">
+    <div className="bg-[#2EC4B6] w-full ">
+      <div className="w-full block max-w-[100rem] mx-auto px-4 pb-12 md:pb-0 overflow-hidden">
         <motion.div
           variants={variants}
           initial="hidden"
           animate="show"
-          className="flex justify-between pt-8"
+          className="flex flex-col md:flex-row md:justify-between pt-18"
         >
           <div className="flex flex-col gap-5">
             <h2 className="text-[3rem] md:text-[4rem] leading-tight font-bold">
@@ -34,29 +35,25 @@ export default function Page() {
           </div>
           <div className="mt-28">
             <div>
-              <motion.div className="">
+              <ScrollAnimation from={200} to={0} className="">
                 <Image
-                  src="/frame 2.png"
-                  width={300}
+                  src="/group 11.png"
+                  width={600}
                   height={50}
                   alt="Phone"
-                  className="pt-14 ml-[-18rem]  hidden md:block"
+                  className=" ml-[1.5rem]   hidden md:block"
                 />
-              </motion.div>
-              <Image
-                src="/frame 1.png"
-                width={300}
-                height={60}
-                alt="Phone"
-                className="md:mt-[-39rem] mt-[-70rem] md:ml-[2rem] md:w-[20rem] ml-[3rem]"
-              />
-              <Image
+              </ScrollAnimation>
+              <ScrollAnimation from={200} to={0}>
+                <Image
                 src="/frame 21.png"
-                width={300}
+                width={250}
                 height={50}
                 alt="Phone"
-                className="pt-4 w-[40rem] md:hidden block"
+                className=" ml-[2.4rem] mt-[-4rem] md:hidden block"
               />
+              </ScrollAnimation>
+              
             </div>
           </div>
         </motion.div>

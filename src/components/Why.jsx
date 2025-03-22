@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ScrollAnimation } from "./SlideAnimation";
+import Marquee from "react-fast-marquee";
 
 export default function Page() {
   const variants = {
@@ -15,7 +16,7 @@ export default function Page() {
           <h3 className="md:text-[2.8rem] text-[2rem] font-bold text-black text-center">
             Why Elph<span className="text-[#2EC4B6]">Bank?</span>
           </h3>
-          <div className="flex gap-[4rem] md:gap-[12rem] md:pt-20 pt-10 flex-col md:flex-row">
+          <div className="flex gap-[4rem] justify-between md:gap-[0rem] md:pt-20 pt-10 flex-col md:flex-row">
             <ScrollAnimation from={-200} to={0}>
               <div className="md:w-[25rem] md:h-[23rem] rounded-3xl bg-[#cbf3f0] p-8">
                 <Image
@@ -79,11 +80,24 @@ export default function Page() {
             </ScrollAnimation>
           </div>
           <div className="pt-16">
-                <h3 className="text-[2.3rem] text-[#2EC4B6] font-semibold">Our Services</h3>
-                <div>
-                    <div className="flex gap-9">
-                        -
+                <h3 className="md:text-[2.3rem] text-[1.5rem] text-[#2EC4B6] font-semibold">Our Services</h3>
+                <div className="p-10 ml-6 flex flex-col gap-16">
+                  <Marquee behavior="" direction="" autoFill = {true} pauseOnHover>
+                     <div className="flex gap-">
+                        <Image src="/Group 7.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]"/>
+                        <Image src="/Group 8.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]" />
+                        <Image src="/Group 9.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]" />
+                        <Image src="/Group 10.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]"/>
                     </div>
+                  </Marquee>
+                  <Marquee behavior="" direction="left" autoFill = {true} pauseOnHover>
+                     <div className="flex gap-">
+                        <Image src="/Group 12.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]"/>
+                        <Image src="/Group 13.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]" />
+                        <Image src="/Group 14.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]" />
+                        <Image src="/Group 15.png" width={300} height={20} alt="airtime" className="px-10 md:w-[20rem]"/>
+                    </div>
+                  </Marquee>
                 </div>
           </div>
         </motion.div>

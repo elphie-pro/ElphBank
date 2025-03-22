@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <div className="bg-[#2EC4B6]">
         <div className="w-full block max-w-[100rem] mx-auto px-4 md:pb-2 ">
-            <nav className="py-6 flex gap-[30.5rem]">
+            <nav className="py-6 flex justify-between">
             <div className="w-[10rem] ">
                 <Link href="/" className="md:absolute">
                         <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo"/>
