@@ -19,20 +19,23 @@ export default function Page() {
           animate="show"
           className="flex flex-col md:flex-row md:justify-between pt-18"
         >
-          <div className="flex flex-col gap-5">
-            <h2 className="text-[3rem] md:text-[4rem] leading-tight font-bold">
-              Effortless <br /> Easy <br /> Encrypted.
-            </h2>
-            <p className=" text-[.9rem] md:text-[1.2rem]">
-              Connect your money to your friends, <br /> family & brands
-            </p>
-            <Link
-              href=""
-              className="bg-black w-[12rem] h-[3rem] text-center rounded-xl pt-[.6rem] text-[1.2rem] block"
-            >
-              Get Started
-            </Link>
-          </div>
+          <ScrollAnimation from={-200} to={0}>
+              <div className="flex flex-col gap-5">
+              <h2 className="text-[3rem] md:text-[4rem] leading-tight font-bold">
+                Effortless <br /> Easy <br /> Encrypted.
+              </h2>
+              <p className=" text-[.9rem] md:text-[1.2rem]">
+                Connect your money to your friends, <br /> family & brands
+              </p>
+              <Link
+                href=""
+                className="bg-black w-[12rem] h-[3rem] text-center rounded-xl pt-[.6rem] text-[1.2rem] block"
+              >
+                Get Started
+              </Link>
+            </div>
+          </ScrollAnimation>
+          
           <div className="mt-28">
             <div>
               <ScrollAnimation from={200} to={0} className="">
