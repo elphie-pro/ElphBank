@@ -8,7 +8,6 @@ export default function Page() {
 
   const handleToggle = () => {
     setOpen((prev) => !prev);
-    console.log("hello", open);
   };
   return (
     <div className="bg-[#2EC4B6]">
@@ -57,7 +56,7 @@ export default function Page() {
             <div
               className={`${
                 !open ? "hidden" : "block"
-              } md:hidden bg-[#2EC4B6] shadow-2xl absolute top-16 right-0 w-[24rem] p-6`}
+              } md:hidden bg-[#2EC4B6] shadow-2xl absolute top-16 right-0 w-[24rem] p-8`}
             >
               <ul className="flex flex-col gap-5">
                 <li>

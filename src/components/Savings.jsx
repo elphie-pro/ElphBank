@@ -65,8 +65,8 @@ export default function Page() {
                                     </div>
                                 </div>
                                 <div className="flex pt-8 pl-3">
-                                    <button className="bg-[#cbf3f0] w-[2.5rem] rounded-xl p-1"><Image src='/mingcute_arrow-right-fill.png' width={30} height={50} alt="arrow"/></button>
-                                    <button className="bg-[#cbf3f0] w-[14rem] rounded-xl p-1 text-[#2EC4B6]">Learn More</button>
+                                    <button className="bg-[#2EC4B6] w-[2.5rem] rounded-xl p-1"><Image src='/mingcute_arrow-right-fill white.png' width={30} height={50} alt="arrow"/></button>
+                                    <button className="bg-[#2EC4B6] w-[14rem] rounded-xl p-1 text-white">Learn More</button>
                                 </div>
                             </div>
                         </div>
