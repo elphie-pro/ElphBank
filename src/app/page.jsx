@@ -5,12 +5,12 @@ import Savings from '../components/Savings.jsx'
 
 export default function Home() {
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <Navbar />
       <Started />
       <Why />
       <Savings />
-    </>
+    </div>
       
   );
 }

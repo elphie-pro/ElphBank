@@ -10,7 +10,7 @@ export default function Page() {
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
     return (       
-    <div className="bg-[#cbf3f0]">
+    <div className="bg-[#cbf3f0] overflow-hidden">
         <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
             <motion.div variants={variants} initial="hidden" animate="show">
                 <h3 className="md:text-[2.8rem] text-[2rem] text-[#2EC4B6] text-center font-bold">Boost your Savings</h3>
