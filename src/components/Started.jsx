@@ -6,17 +6,10 @@ import { useRef } from "react";
 import { ScrollAnimation } from "./SlideAnimation";
 
 export default function Page() {
-  const variants = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.25 } },
-  };
   return (
     <div className="bg-[#2EC4B6] w-full ">
       <div className="w-full block max-w-[100rem] mx-auto px-4 pb-12 md:pb-0 overflow-hidden">
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          animate="show"
+        <div
           className="flex flex-col md:flex-row md:justify-between pt-18"
         >
           <ScrollAnimation from={-200} to={0}>
@@ -59,7 +52,7 @@ export default function Page() {
               
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

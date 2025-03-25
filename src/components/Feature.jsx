@@ -4,14 +4,9 @@ import Image from "next/image";
 import { ScrollAnimation } from "./SlideAnimation";
 
 export default function Page() {
-    const variants = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1, transition: { staggerChildren: 0.25 } },
-      };
     return (
         <div className="bg-white overflow-hidden text-black">
             <div className="w-full block max-w-[100rem] mx-auto px-4 md:py-12 pb-4 ">
-                <motion.div variants={variants} initial="hidden" animate="show">
                     <div className="text-center">
                         <h1 className="md:text-[3.2rem] text-[2.8rem] font-bold">All features in one web app</h1>
                         <p className="text-[1.1rem]">We have over 120+ features available in this bank, that’s why our clients<br />are more than others, we always try to add new features</p>
@@ -69,7 +64,6 @@ export default function Page() {
                     <div className="pt-34">
                         <p className="md:text-[.9rem] text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
                     </div>
-                </motion.div>
             </div>
         </div>
     );

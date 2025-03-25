@@ -5,14 +5,9 @@ import { ScrollAnimation } from "./SlideAnimation";
 import Marquee from "react-fast-marquee";
 
 export default function Page() {
-  const variants = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.25 } },
-  };
   return (
     <div className="bg-white">
       <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
-        <motion.div variants={variants} initial="hidden" animate="show">
           <h3 className="md:text-[2.8rem] text-[2rem] font-bold text-black text-center">
             Why Elph<span className="text-[#2EC4B6]">Bank?</span>
           </h3>
@@ -66,7 +61,7 @@ export default function Page() {
                 />
                 <div className="pt-[4.5rem]">
                   <h3 className="text-black font-semibold text-[1.8rem]">
-                    100% Secure
+                    Super Fast
                   </h3>
                   <p className="font-light text-black  pt-3">
                     You can send money with one click. As we pride ourselves
@@ -100,7 +95,6 @@ export default function Page() {
                   </Marquee>
                 </div>
           </div>
-        </motion.div>
       </div>
     </div>
   );
