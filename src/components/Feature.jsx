@@ -17,14 +17,14 @@ export default function Page() {
                         <p className="text-[1.1rem]">We have over 120+ features available in this bank, that’s why our clients<br />are more than others, we always try to add new features</p>
                         <div className="flex flex-col justify-between pt-14 md:flex-row">
                             <div className="flex flex-col gap-4"> 
-                                <ScrollAnimation from={-200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
+                                <ScrollAnimation yfrom={-200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
                                     <div className="flex flex-col ">
                                     <Image src='/hugeicons_money-send-circle.png' width={50} height={50} alt="send" className="ml-[1.2rem]"/>
                                     <h2 className="pt-4 font-bold">Save</h2>
                                     </div>
                                 </ScrollAnimation>
                                 <div className="pl-[14rem]">
-                                    <ScrollAnimation from={200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
+                                    <ScrollAnimation yfrom={200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
                                         <div className="flex flex-col ">
                                             <Image src='/solar_ticket-broken.png' width={50} height={50} alt="send" className="ml-[1.2rem]"/>
                                             <h2 className="pt-4 font-bold">Ticket</h2>
@@ -33,14 +33,14 @@ export default function Page() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-4"> 
-                                <ScrollAnimation from={-200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
+                                <ScrollAnimation yfrom={-200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
                                     <div className="flex flex-col ">
                                     <Image src='/Invoice.png' width={50} height={50} alt="send" className="ml-[1.2rem]"/>
                                     <h2 className="pt-4 font-bold">Bill</h2>
                                     </div>
                                 </ScrollAnimation>
                                 <div className="pl-[14rem]">
-                                    <ScrollAnimation from={200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
+                                    <ScrollAnimation yfrom={200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
                                         <div className="flex flex-col ">
                                             <Image src='/Shopping-cart.svg' width={50} height={50} alt="send" className="ml-[1.2rem]"/>
                                             <h2 className="pt-4 font-bold">Shopping</h2>
@@ -49,14 +49,14 @@ export default function Page() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-4"> 
-                                <ScrollAnimation from={-200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
+                                <ScrollAnimation yfrom={-200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
                                     <div className="flex flex-col ">
                                     <Image src='/Vector.png' width={50} height={50} alt="send" className="ml-[1.2rem]"/>
                                     <h2 className="pt-4 font-bold">Invest</h2>
                                     </div>
                                 </ScrollAnimation>
                                 <div className="pl-[14rem]">
-                                    <ScrollAnimation from={200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
+                                    <ScrollAnimation yfrom={200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
                                         <div className="flex flex-col ">
                                             <Image src='/pepicons-pencil_internet.png' width={50} height={50} alt="send" className="ml-[1.2rem]"/>
                                             <h2 className="pt-4 font-bold">Internet</h2>
