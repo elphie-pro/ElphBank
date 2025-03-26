@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ScrollAnimation } from "./SlideAnimation";
+import { ScrollAnimation } from "../SlideAnimation";
 import Marquee from "react-fast-marquee";
 
 export default function Page() {

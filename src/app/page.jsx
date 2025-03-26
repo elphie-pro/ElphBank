@@ -1,9 +1,9 @@
 "use client"
-import Started from '../components/Started'
+import Started from '../components/Landing/Started'
 import Navbar from '../components/Navbar.jsx'
-import Why from '../components/Why.jsx'
-import Savings from '../components/Savings.jsx'
-import Feature from '../components/Feature.jsx'
+import Why from '../components/Landing/Why.jsx'
+import Savings from '../components/Landing/Savings.jsx'
+import Feature from '../components/Landing/Feature.jsx'
 import { motion } from 'framer-motion'
 
 export default function Home() {

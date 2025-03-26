@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { easeOut, motion } from "framer-motion";
 import { useRef } from "react";
-import { ScrollAnimation } from "./SlideAnimation";
+import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
   return (

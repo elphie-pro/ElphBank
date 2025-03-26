@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ScrollAnimation } from "./SlideAnimation";
+import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
     return (

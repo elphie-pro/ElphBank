@@ -32,7 +32,7 @@ export default function Page() {
                 <Link href="/">Features</Link>
               </li>
               <li>
-                <Link href="/">About</Link>
+                <Link href="/about">About</Link>
               </li>
             </ul>
           </div>

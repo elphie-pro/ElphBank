@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { ScrollAnimation } from "./SlideAnimation";
+import { ScrollAnimation } from "../SlideAnimation";
 import { motion } from "framer-motion";
 
 export default function Page() {
@@ -32,7 +32,7 @@ export default function Page() {
                                         <h4 className="md:text-[.9rem] text-[.9rem]">Build Credit with every swipe</h4>
                                     </div>
                                 </div>
-                                <div className="flex pt-8 pl-3">
+                                <div className="flex pt-8 pl-3">    
                                     <button className="bg-[#cbf3f0] w-[2.5rem] rounded-xl p-1"><Image src='/mingcute_arrow-right-fill.png' width={30} height={50} alt="arrow"/></button>
                                     <button className="bg-[#cbf3f0] w-[14rem] rounded-xl p-1 text-[#2EC4B6]">Learn More</button>
                                 </div>
