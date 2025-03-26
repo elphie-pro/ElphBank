@@ -2,9 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Page() {
   const [open, setOpen] = useState(false);
+  const path = usePathname()
 
   const handleToggle = () => {
     setOpen((prev) => !prev);
@@ -24,14 +26,14 @@ export default function Page() {
             </Link>
           </div>
           <div className="pt-2 pl-2 hidden md:block">
-            <ul className="flex gap-20">
-              <li>
-                <Link href="/">Home</Link>
+            <ul className="flex gap-20 text-black">
+              <li className={path === '/' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
+                <Link href="/" >Home</Link>
               </li>
-              <li>
+              <li className={path === '/features' ?  "font-bold w-[6rem] pl-3 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                 <Link href="/">Features</Link>
               </li>
-              <li>
+              <li className={path === '/about' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                 <Link href="/about">About</Link>
               </li>
             </ul>
@@ -58,14 +60,14 @@ export default function Page() {
                 !open ? "hidden" : "block"
               } md:hidden bg-[#2EC4B6] shadow-2xl absolute top-16 right-0 w-[24rem] p-8`}
             >
-              <ul className="flex flex-col gap-5">
-                <li>
+              <ul className="flex flex-col gap-5 text-black">
+                <li className={path === '/' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                   <Link href="/">Home</Link>
                 </li>
-                <li>
+                <li className={path === '/features' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                   <Link href="/">Features</Link>
                 </li>
-                <li>
+                <li className={path === '/about' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                   <Link href="/">About</Link>
                 </li>
               </ul>
