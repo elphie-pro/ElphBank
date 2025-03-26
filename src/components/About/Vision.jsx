@@ -4,7 +4,7 @@ import { ScrollAnimation } from "../SlideAnimation";
 export default function Page() {
     return (
     <div className="bg-white overflow-hidden">
-        <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
+        <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-3 ">
             <div className="flex flex-col md:flex-row gap-4 justify-between pt-18">
                 <div className="flex flex-col gap-9">
                     <ScrollAnimation from={-200} to={0} className="md:w-[35rem] md:h-[13rem] h-[16rem] rounded-3xl bg-[#cbf3f0] flex flex-col gap-3 md:p-5">
@@ -50,6 +50,9 @@ export default function Page() {
                     <Image src='/Group 16.svg' width={0} height={20} alt="about" className="w-full"/>
                 </ScrollAnimation>
             </div>
+            <div className="pt-34">
+                        <p className="md:text-[.9rem] text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
+             </div>
         </div>
     </div>
     );
