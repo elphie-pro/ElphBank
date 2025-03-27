@@ -24,18 +24,18 @@ export default function Page() {
                             the right approaches, you can grow your savings effortlessly <br />
                             while securing financial stability.</p>
                             <div className="flex flex-col">
-                             <div className="pt-3 flex gap-3">
-                                <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" />
-                                <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Reduce Unnecessary Expenses</h4>
-                            </div>
-                            <div className="pt-3 flex gap-3">
-                                <Image src='/ri_checkbox-circle-fill.png' width={25} height={10} alt="check" />
-                                <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Leverage High-Interest Accounts</h4>
-                            </div>
-                            <div className="pt-3 flex gap-3">
-                                <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" />
-                                <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Take Advantage of Rewards & Discounts</h4>
-                            </div>
+                                <div className="pt-3 flex gap-3">
+                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" />
+                                    <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Reduce Unnecessary Expenses</h4>
+                                </div>
+                                <div className="pt-3 flex gap-3">
+                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={10} alt="check" />
+                                    <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Leverage High-Interest Accounts</h4>
+                                </div>
+                                <div className="pt-3 flex gap-3">
+                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" />
+                                    <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Take Advantage of Rewards & Discounts</h4>
+                                </div>
                             </div>
                         </div>
                         

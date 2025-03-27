@@ -31,7 +31,7 @@ export default function Page() {
                 <Link href="/" >Home</Link>
               </li>
               <li className={path === '/features' ?  "font-bold w-[6rem] pl-3 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
-                <Link href="/">Features</Link>
+                <Link href="/features">Features</Link>
               </li>
               <li className={path === '/about' ?  "font-bold w-[5rem] pl-4   pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                 <Link href="/about">About</Link>
