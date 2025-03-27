@@ -10,7 +10,7 @@ export default function Page() {
     <div className="bg-[#cbf3f0] overflow-hidden">
         <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
                 <h3 className="md:text-[2.8rem] text-[2rem] text-[#2EC4B6] text-center font-bold">Boost your Savings</h3>
-                <div className="flex flex-col md:flex-row justify-between pt-18 gap-[4rem] md:gap-[0rem]">
+                <div className="flex flex-col items-center md:flex-row justify-between pt-18 gap-[4rem] md:gap-[0rem]">
                     <ScrollAnimation yfrom={200} to={0} >
                         <Image src='/Rectangle 31.png' width={350} height={50} alt="background" className=""/>
                         <div className="flex-col gap-5 mt-[-30rem] absolute">

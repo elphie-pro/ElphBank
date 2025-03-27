@@ -11,7 +11,7 @@ export default function Page() {
           <h3 className="md:text-[2.8rem] text-[2rem] font-bold text-black text-center">
             Why Elph<span className="text-[#2EC4B6]">Bank?</span>
           </h3>
-          <div className="flex gap-[4rem] justify-between md:gap-[0rem] md:pt-20 pt-10 flex-col md:flex-row">
+          <div className="flex gap-[4rem] justify-between md:gap-[0rem] md:pt-20 pt-10 items-center flex-col md:flex-row">
             <ScrollAnimation from={-200} to={0}>
               <div className="md:w-[25rem] md:h-[23rem] rounded-3xl bg-[#cbf3f0] p-8">
                 <Image

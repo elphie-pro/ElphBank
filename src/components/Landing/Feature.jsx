@@ -10,7 +10,7 @@ export default function Page() {
                     <div className="text-center">
                         <h1 className="md:text-[3.2rem] text-[2.8rem] font-bold">All features in one web app</h1>
                         <p className="text-[1.1rem]">We have over 120+ features available in this bank, that’s why our clients<br />are more than others, we always try to add new features</p>
-                        <div className="flex flex-col justify-between pt-14 md:flex-row">
+                        <div className="flex flex-col items-center justify-between pt-14 md:flex-row">
                             <div className="flex flex-col gap-4"> 
                                 <ScrollAnimation yfrom={-200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] rounded-[120rem] p-4">
                                     <div className="flex flex-col ">
