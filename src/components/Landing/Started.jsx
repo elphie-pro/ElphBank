@@ -21,7 +21,7 @@ export default function Page() {
                 Connect your money to your friends, <br /> family & brands
               </p>
               <Link
-                href=""
+                href="/login"
                 className="bg-black w-[12rem] h-[3rem] text-center rounded-xl pt-[.6rem] text-[1.2rem] block"
               >
                 Get Started
