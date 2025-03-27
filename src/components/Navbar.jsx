@@ -64,11 +64,11 @@ export default function Page() {
                 <li className={path === '/' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                   <Link href="/">Home</Link>
                 </li>
-                <li className={path === '/features' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
-                  <Link href="/">Features</Link>
+                <li className={path === '/features' ?  "font-bold w-[6.5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
+                  <Link href="/features">Features</Link>
                 </li>
                 <li className={path === '/about' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
-                  <Link href="/">About</Link>
+                  <Link href="/about">About</Link>
                 </li>
               </ul>
               <div className={` ${!open ? "hidden" : "block"} mt-4`}>
