@@ -3,15 +3,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { auth, provider, signInWithPopup } from "@/firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "next/navigation";
+
 
 export default function Page() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const route = useRouter()
 
     const variants = {
         hidden: { opacity: 0 },
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
+
+      const passwordLogin = async() => {
+        try {
+            await signInWithEmailAndPassword(auth, email, password)
+            route.push('/dashboard')
+        } catch (error) {
+            console.log(error)
+        }
+      }
+
+      const googleLogin = async() => {
+        try {
+            await signInWithPopup(auth, provider)
+            route.push('/dashboard')
+        } catch (error) {
+            console.log(error)
+        }
+      }
 
     return (
         <>
@@ -52,8 +75,8 @@ export default function Page() {
                            </div>
                         </div>
                         <div className="pt-6 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]">Sign In </button>
-                            <button className=" cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6] flex gap-2 p-1"><Image src="/devicon_google.png" width={30} height={38} alt="ElphBank Logo" className="ml-8  md:ml-[4.5rem]"/> <span className="mt-1">Sign in with Google?</span></button>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={passwordLogin}>Sign In </button>
+                            <button className=" cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6] flex gap-2 p-1" onClick={googleLogin}><Image src="/devicon_google.png" width={30} height={38} alt="ElphBank Logo" className="ml-8  md:ml-[4.5rem]"/> <span className="mt-1">Sign in with Google?</span></button>
                         </div>
                         <div className="pt-4 md:ml-16 ml-7">
                             <p className="text-white font-semibold text-[.9rem]">Dont have an account? <Link href="/sign-up" className="text-black">Sign Up</Link></p>

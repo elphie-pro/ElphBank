@@ -2,17 +2,62 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { MotionConfig } from "framer-motion";
+import { db } from "@/firebase-config";
+import { auth, signInWithPopup, provider } from "@/firebase-config";
+import { setDoc, doc } from "firebase/firestore";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
     const [username, setUserName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [user, setUser] = useState(null)
+    
+    const route = useRouter()
 
     const variants = {
         hidden: { opacity: 0 },
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
+
+    const googleCreate = async () => {
+        try {
+                const result = await signInWithPopup(auth, provider)
+                const user = result.user
+
+                await setDoc(doc(db, "users", user.uid), {
+                    name: user.displayName,
+                    email: user.email,
+                    password: user.password,
+                  });
+            
+                  setUser(user);
+                  route.push('/dashboard')
+                  console.log("User signed in:", user);
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const passwordCreate = async () => {
+        try {
+            userCredential = await createUserWithEmailAndPassword(auth, email, password)
+            const users = userCredential.user
+
+            await setDoc(doc(db, 'users', users.uid), {
+                username: username,
+                email: email,
+                password: password
+            }); 
+            route.push('/dashboard')
+        } catch (error) {
+            console.log(error)
+        }
+       
+    }
 
     return (
         <>
@@ -54,8 +99,8 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="pt-6 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]">Create Account </button>
-                            <button className=" cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6] flex gap-2 p-1"><Image src="/devicon_google.png" width={30} height={38} alt="ElphBank Logo" className="ml-8  md:ml-[4.5rem]"/> <span className="mt-1">Sign up with Google?</span></button>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={passwordCreate}>Create Account </button>
+                            <button className=" cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6] flex gap-2 p-1" onClick={googleCreate}><Image src="/devicon_google.png" width={30} height={38} alt="ElphBank Logo" className="ml-8  md:ml-[4.5rem]"/> <span className="mt-1">Sign up with Google?</span></button>
                         </div>
                         <div className="pt-4 md:ml-16 ml-7">
                             <p className="text-white font-semibold text-[.9rem]">Already have an account? <Link href="/login" className="text-black">Sign In</Link></p>
