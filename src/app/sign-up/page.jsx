@@ -22,41 +22,42 @@ export default function Page() {
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
 
-    const googleCreate = async () => {
+      const googleCreate = async () => {
         try {
-                const result = await signInWithPopup(auth, provider)
-                const user = result.user
-
-                await setDoc(doc(db, "users", user.uid), {
-                    name: user.displayName,
-                    email: user.email,
-                    password: user.password,
-                  });
-            
-                  setUser(user);
-                  route.push('/dashboard')
-                  console.log("User signed in:", user);
-            
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+    
+            await setDoc(doc(db, "users", user.uid), {
+                name: user.displayName,
+                email: user.email,
+                createdAt: new Date()
+            });
+        
+            setUser(user);
+            route.push('/complete-registration');
+            console.log("User signed in:", user);
         } catch (error) {
-            console.log(error)
+            console.error("Google Sign-In Error:", error);
         }
     }
-
+    
     const passwordCreate = async () => {
         try {
-            userCredential = await createUserWithEmailAndPassword(auth, email, password)
-            const users = userCredential.user
-
-            await setDoc(doc(db, 'users', users.uid), {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+    
+            await setDoc(doc(db, 'users', user.uid), {
                 username: username,
                 email: email,
-                password: password
+                password: password,
+                createdAt: new Date()
             }); 
-            route.push('/dashboard')
+    
+            setUser(user);
+            route.push('/complete-registration');
         } catch (error) {
-            console.log(error)
+            console.error("Email Sign-Up Error:", error);
         }
-       
     }
 
     return (
