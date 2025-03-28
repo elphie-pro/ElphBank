@@ -1,10 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { ScrollAnimation } from "../SlideAnimation";
 import Marquee from "react-fast-marquee";
 
 export default function Page() {
+  const route = useRouter()
   return (
     <div className="bg-white">
       <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
@@ -28,7 +29,7 @@ export default function Page() {
                     Our service is highly secure. There is no chance of getting
                     hacked
                   </p>
-                  <button className="mt-7 rounded-xl text-black w-[8rem] h-[2.5rem] bg-[#2EC4B6]">
+                  <button className="mt-7 rounded-xl text-black w-[8rem] h-[2.5rem] bg-[#2EC4B6] cursor-pointer" onClick={() => route.push('/features')}>
                     Learn More
                   </button>
                 </div>
@@ -45,7 +46,7 @@ export default function Page() {
                     All the features available in this one would definitely save
                     you some time.
                   </p>
-                  <button className="mt-7 rounded-xl text-black w-[8rem] h-[2.5rem] bg-[#2EC4B6]">
+                  <button className="mt-7 rounded-xl text-black w-[8rem] h-[2.5rem] bg-[#2EC4B6] cursor-pointer" onClick={() => route.push('/features')}>
                     Learn More
                   </button>
                 </div>
@@ -67,7 +68,7 @@ export default function Page() {
                     You can send money with one click. As we pride ourselves
                     with fast delivery
                   </p>
-                  <button className="mt-7 rounded-xl text-black w-[8rem] h-[2.5rem] bg-[#2EC4B6]">
+                  <button className="mt-7 rounded-xl text-black w-[8rem] h-[2.5rem] bg-[#2EC4B6] cursor-pointer" onClick={() => route.push('/features')}>
                     Learn More
                   </button>
                 </div>

@@ -2,11 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Page() {
   const [open, setOpen] = useState(false);
   const path = usePathname()
+  const route = useRouter()
 
   const handleToggle = () => {
     setOpen((prev) => !prev);
@@ -40,18 +41,18 @@ export default function Page() {
           </div>
           <div className="hidden md:block">
             <div className="flex gap-5">
-              <Link
+              <button
                 href="/login"
-                className="border-2 w-[8rem] h-[2.5rem] text-center pt-[.4rem] font-semibold rounded-[0.6rem]"
+                className="border-2 w-[8rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer" onClick={() => route.push('/login')}
               >
                 Sign In
-              </Link>
-              <Link
+              </button>
+              <button
                 href="/sign-up"
-                className=" w-[8rem] h-[2.5rem] font-semibold text-center pt-[.5rem] rounded-[0.6rem] bg-white text-[#2ec4b6]"
+                className=" w-[8rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-white text-[#2ec4b6] cursor-pointer" onClick={() => route.push('/sign-up')}
               >
                 Sign Up
-              </Link>
+              </button>
             </div>
           </div>
             <button onClick={handleToggle} className="md:hidden block"><Image src='/Group 122.png' width={30} height={50} alt="toggle"/></button>
@@ -73,18 +74,18 @@ export default function Page() {
               </ul>
               <div className={` ${!open ? "hidden" : "block"} mt-4`}>
                 <div className="flex gap-5">
-                  <Link
+                  <button
                     href="/login"
-                    className="border-2 w-[8rem] h-[2.5rem] text-center pt-[.4rem] font-semibold rounded-[0.6rem]"
+                    className="border-2 w-[8rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer" onClick={() => route.push('/login')}
                   >
                     Sign In
-                  </Link>
-                  <Link
+                  </button>
+                  <button
                     href="/sign-up"
-                    className=" w-[8rem] h-[2.5rem] font-semibold text-center pt-[.5rem] rounded-[0.6rem] bg-white text-[#2ec4b6]"
+                    className=" w-[8rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-white text-[#2ec4b6] cursor-pointer" onClick={() => route.push('/sign-up')}
                   >
                     Sign Up
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

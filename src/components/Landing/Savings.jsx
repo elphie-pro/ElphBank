@@ -1,11 +1,11 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import { ScrollAnimation } from "../SlideAnimation";
-import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+
 
 export default function Page() {
-
+    const route = useRouter()
     return (       
     <div className="bg-[#cbf3f0] overflow-hidden">
         <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
@@ -34,7 +34,9 @@ export default function Page() {
                                 </div>
                                 <div className="flex pt-8 pl-3">    
                                     <button className="bg-[#cbf3f0] w-[2.5rem] rounded-xl p-1"><Image src='/mingcute_arrow-right-fill.png' width={30} height={50} alt="arrow"/></button>
-                                    <button className="bg-[#cbf3f0] w-[14rem] rounded-xl p-1 text-[#2EC4B6]">Learn More</button>
+                                    <button className="bg-[#cbf3f0] w-[14rem] rounded-xl p-1 text-[#2EC4B6] cursor-pointer" onClick={() => {
+                                        route.push('/features')
+                                    }}>Learn More</button>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +64,9 @@ export default function Page() {
                                 </div>
                                 <div className="flex pt-8 pl-3">
                                     <button className="bg-[#2EC4B6] w-[2.5rem] rounded-xl p-1"><Image src='/mingcute_arrow-right-fill white.png' width={30} height={50} alt="arrow"/></button>
-                                    <button className="bg-[#2EC4B6] w-[14rem] rounded-xl p-1 text-white">Learn More</button>
+                                    <button className="bg-[#2EC4B6] w-[14rem] rounded-xl p-1 text-white cursor-pointer" onClick={() => {
+                                        route.push('/features')
+                                    }}>Learn More</button>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +94,9 @@ export default function Page() {
                                 </div>
                                 <div className="flex pt-8 pl-3">
                                     <button className="bg-[#cbf3f0] w-[2.5rem] rounded-xl p-1"><Image src='/mingcute_arrow-right-fill.png' width={30} height={50} alt="arrow"/></button>
-                                    <button className="bg-[#cbf3f0] w-[14rem] rounded-xl p-1 text-[#2EC4B6]">Learn More</button>
+                                    <button className="bg-[#cbf3f0] w-[14rem] rounded-xl p-1 text-[#2EC4B6] cursor-pointer" onClick={() => {
+                                        route.push('/features')
+                                    }}>Learn More</button>
                                 </div>
                             </div>
                         </div>

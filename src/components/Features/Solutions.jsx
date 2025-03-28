@@ -1,7 +1,10 @@
+"use client"
 import { ScrollAnimation } from "../SlideAnimation";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+    const route = useRouter()
     return (
         <div className="bg-[#2ec4b6] overflow-">
                         <ScrollAnimation from={-200} to={0}>
@@ -40,7 +43,9 @@ export default function Page() {
                                 </div>
                             </div>
                             <div className="md:ml-[26rem] ml-[6.5rem] pt-8">
-                                <button className="text-white w-[10rem] h-[3rem] bg-[#2ec4b6] p-3 rounded-2xl">Learn More</button>
+                                <button className="text-white w-[10rem] h-[3rem] bg-[#2ec4b6] p-3 rounded-2xl cursor-pointer" onClick={() => {
+                                    route.push('/login')
+                                }}>Get Started</button>
                             </div> 
                             </ScrollAnimation>
                         </div>

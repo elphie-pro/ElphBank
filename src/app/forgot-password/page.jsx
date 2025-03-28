@@ -2,13 +2,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Page() {
     const [email, setEmail] = useState("")
+    
+    const variants = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { staggerChildren: 0.25 } },
+      };
 
     return (
         <>
-        <div className="bg-[#2EC4B6] w-full min-h-screen">
+        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] w-full min-h-screen">
             <nav className="py-6 px-2 md:px-18 w-[20rem]">
                 <Link href="/">
                     <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo"/>
@@ -40,7 +46,7 @@ export default function Page() {
                     </div>
                 </div>    
             </div>    
-        </div>
+        </motion.div>
         </>
         
     );

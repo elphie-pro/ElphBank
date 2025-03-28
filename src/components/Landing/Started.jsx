@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import { easeOut, motion } from "framer-motion";
-import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
+  const route = useRouter()
   return (
     <div className="bg-[#2EC4B6] w-full ">
       <div className="w-full block max-w-[100rem] mx-auto px-4 pb-12 md:pb-0 overflow-hidden">
@@ -20,12 +19,11 @@ export default function Page() {
               <p className=" text-[.9rem] md:text-[1.2rem]">
                 Connect your money to your friends, <br /> family & brands
               </p>
-              <Link
-                href="/login"
-                className="bg-black w-[12rem] h-[3rem] text-center rounded-xl pt-[.6rem] text-[1.2rem] block"
+              <button
+                className="bg-black w-[12rem] h-[3rem] text-center rounded-xl pt-[.1rem] text-[1.2rem] cursor-pointer" onClick={() => route.push('/login')}
               >
                 Get Started
-              </Link>
+              </button>
             </div>
           </ScrollAnimation>
           
