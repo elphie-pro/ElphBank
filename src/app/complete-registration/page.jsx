@@ -3,15 +3,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { setDoc, doc } from "firebase/firestore";
+import { auth, db } from "@/firebase-config";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function Page() {
     const [accountType, setAccountType] = useState("Personal Account")
     const [deposit, setDeposit] = useState(0)
+    const route = useRouter()
 
     const variants = {
         hidden: { opacity: 0 },
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
+
+      const complete = async() => {
+        const user = auth.currentUser
+            if (user) {
+                try{
+                    await setDoc(doc(db, "users", user.uid), {
+                        accountType: accountType,
+                        balance: deposit
+                    }, { merge: true })
+                    route.push('/dashboard')
+                    toast.success('Account Succesfully Created')
+                }catch (error) {
+                    console.log(error)
+                }   
+            }else{
+                console.log('No user logged in')
+            }
+      }
 
     return (
         <>
@@ -50,7 +73,7 @@ export default function Page() {
                                 </div>
                         </div>
                         <div className="pt-10 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]">Complete Registration </button>                        </div>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={complete}>Complete Registration </button>                        </div>
                         <div className="pt-4 md:ml-16 ml-7">
                             <p className="text-white font-semibold text-[.9rem]">Already have an account? <Link href="/login" className="text-black">Sign In</Link></p>
                         </div>

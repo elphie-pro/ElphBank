@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { auth, provider, signInWithPopup } from "@/firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 
 export default function Page() {
@@ -22,6 +23,7 @@ export default function Page() {
         try {
             await signInWithEmailAndPassword(auth, email, password)
             route.push('/dashboard')
+            toast.success('Login Successful')
         } catch (error) {
             console.log(error)
         }
@@ -31,6 +33,7 @@ export default function Page() {
         try {
             await signInWithPopup(auth, provider)
             route.push('/dashboard')
+            toast.success('Login Successful')
         } catch (error) {
             console.log(error)
         }

@@ -8,6 +8,8 @@ import { setDoc, doc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+
 
 export default function Page() {
     const [username, setUserName] = useState("")
@@ -35,7 +37,7 @@ export default function Page() {
         
             setUser(user);
             route.push('/complete-registration');
-            console.log("User signed in:", user);
+            toast.warning('Complete Registration')
         } catch (error) {
             console.error("Google Sign-In Error:", error);
         }
@@ -55,6 +57,7 @@ export default function Page() {
     
             setUser(user);
             route.push('/complete-registration');
+            toast.warning('Complete Registration')
         } catch (error) {
             console.error("Email Sign-Up Error:", error);
         }
@@ -100,7 +103,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="pt-6 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={passwordCreate}>Create Account </button>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={passwordCreate}>Proceed</button>
                             <button className=" cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6] flex gap-2 p-1" onClick={googleCreate}><Image src="/devicon_google.png" width={30} height={38} alt="ElphBank Logo" className="ml-8  md:ml-[4.5rem]"/> <span className="mt-1">Sign up with Google?</span></button>
                         </div>
                         <div className="pt-4 md:ml-16 ml-7">
