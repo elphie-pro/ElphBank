@@ -3,9 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { auth } from "@/firebase-config";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function Page() {
     const [email, setEmail] = useState("")
+    const route = useRouter()
+
+    const sendEmail = async() => {
+        try{
+            await sendPasswordResetEmail(auth, email)
+            route.push('/login')
+            toast.success('Reset Email sent successfully')
+        }catch(error) {
+            toast.error(error)
+        }
+    }
     
     const variants = {
         hidden: { opacity: 0 },
@@ -34,7 +49,7 @@ export default function Page() {
                             }} className="border-2 border-white w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 rounded-tl-xl font-semibold rounded-br-xl placeholder-[#757575] p-2 outline-none"/>
                         </div>
                         <div className="pt-8 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]">Submit Email</button>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={sendEmail}>Retireve Email</button>
                         </div>
                         <div className="pt-6 md:ml-16 ml-7">
                             <p className="text-white font-semibold text-[.9rem]">Already have an account? <Link href="/login" className="text-black">Sign In</Link></p>
