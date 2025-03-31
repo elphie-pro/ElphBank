@@ -40,5 +40,9 @@ export default function Dashboard() {
 
   if (!user) return <p>Redirecting...</p>;
 
-  return <h1>Welcome, {user.username}!</h1>;
+  return (
+    <div>
+      FIshes re ceazyyy
+    </div>
+  );
 }

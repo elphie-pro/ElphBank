@@ -13,13 +13,21 @@ export default function Page() {
     const route = useRouter()
 
     const sendEmail = async() => {
+        if (!email) {
+            toast.error("Please enter your email");
+            return;
+        }
         try{
             await sendPasswordResetEmail(auth, email)
             route.push('/login')
             toast.success('Reset Email sent successfully')
-        }catch(error) {
-            toast.error(error)
-        }
+        }catch (error) {
+            if (error.code === "auth/user-not-found") {
+              toast.error("No account found with this email.");
+            } else {
+              toast.error("Something went wrong. Try again.");
+            }
+          }
     }
     
     const variants = {
