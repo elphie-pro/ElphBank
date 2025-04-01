@@ -4,11 +4,18 @@ import { auth } from "@/firebase-config";
 import { useRouter } from "next/navigation";
 import { getDoc, doc } from "firebase/firestore";
 import { db } from "@/firebase-config";
+import { motion } from "framer-motion";
+import Sidebar from '@/components/Sidebar'
 
 export default function Dashboard() {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState(null);
+
+  const variants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.25 } },
+  };
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged( async(user) => {
@@ -41,8 +48,8 @@ export default function Dashboard() {
   if (!user) return <p>Redirecting...</p>;
 
   return (
-    <div>
-      FIshes re ceazyyy
-    </div>
+    <motion.div variants={variants} initial="hidden" animate="show" className='overflow-x-hidden overflow-y-hidden bg-white w-full min-h-screen'>
+      <Sidebar />
+    </motion.div>
   );
 }

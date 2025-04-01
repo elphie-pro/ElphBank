@@ -11,7 +11,7 @@ export default function Page() {
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
     return (
-        <motion.div variants={variants} initial="hidden" animate="show" className='overflow-x'>
+        <motion.div variants={variants} initial="hidden" animate="show" className='overflow-x-hidden'>
             <Navbar />
             <Solutions />
             <Benefits />
