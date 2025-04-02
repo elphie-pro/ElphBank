@@ -5,7 +5,9 @@ import { useRouter } from "next/navigation";
 import { getDoc, doc } from "firebase/firestore";
 import { db } from "@/firebase-config";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Sidebar from '@/components/Sidebar'
+import Link from "next/link";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -49,6 +51,18 @@ export default function Dashboard() {
 
   return (
     <motion.div variants={variants} initial="hidden" animate="show" className='overflow-x-hidden overflow-y-hidden bg-white w-full min-h-screen'>
+      <nav className="bg-[#2ec4b6] w-full p-4 md:hidden block">
+        <div className="w-[10rem] ">
+            <Link href="/" className="md:solute">
+              <Image
+                src="/Group 5.png"
+                width={150}
+                height={38}
+                alt="ElphBank Logo"
+              />
+            </Link>
+        </div>
+      </nav>
       <Sidebar />
     </motion.div>
   );
