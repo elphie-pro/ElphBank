@@ -7,6 +7,7 @@ import { db } from "@/firebase-config";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Sidebar from '@/components/Sidebar'
+import Buttons from '@/components/Dashboard/Buttons'
 import Link from "next/link";
 
 export default function Dashboard() {
@@ -64,6 +65,7 @@ export default function Dashboard() {
         </div>
       </nav>
       <Sidebar />
+      <Buttons />
     </motion.div>
   );
 }
