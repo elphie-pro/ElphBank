@@ -54,7 +54,7 @@ export default function Dashboard() {
     <motion.div variants={variants} initial="hidden" animate="show" className='overflow-x-hidden overflow-y-hidden bg-white w-full min-h-screen'>
       <nav className="bg-[#2ec4b6] w-full p-4 md:hidden block">
         <div className="w-[10rem] ">
-            <Link href="/" className="md:solute">
+            <Link href="/" className="">
               <Image
                 src="/Group 5.png"
                 width={150}
@@ -65,7 +65,9 @@ export default function Dashboard() {
         </div>
       </nav>
       <Sidebar />
-      <Buttons />
+      <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24">
+        <Buttons />
+      </div>
     </motion.div>
   );
 }
