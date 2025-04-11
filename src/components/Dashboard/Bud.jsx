@@ -1,3 +1,6 @@
+"use client"
+import Card from '@/components/Dashboard/Card'
+
 export default function Page() {
     return (
         <div className="text-black flex flex-col gap-10">
@@ -22,6 +25,10 @@ export default function Page() {
                             Add Budget +
                         </button>
                         </div>
+                </div>
+                {/* Budget Card */}
+                <div>
+                    <Card />
                 </div>
             </div>
         </div>
