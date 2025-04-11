@@ -7,7 +7,7 @@ export default function Page() {
     return (
         <div className="text-black ml-[15rem] flex justify-between">
             <div className="flex flex-col gap-14">
-                <h3 className="text-[1.3rem] font-semibold">Your Balance is ₦360,000<span className="text-[#818f96]">.25</span></h3>
+                <h3 className="text-[1.3rem] font-bold">Your Balance is ₦360,000<span className="text-[#818f96]">.25</span></h3>
                 <div className="pt-8">
                     <Image src='/Group 23.svg' width={300} height={10} alt="pic"/>
                     <div className="absolute mt-[-5.5rem] ml-4 text-white">

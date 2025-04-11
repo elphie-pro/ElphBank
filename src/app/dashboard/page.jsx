@@ -9,6 +9,7 @@ import Image from "next/image";
 import Sidebar from '@/components/Sidebar'
 import Buttons from '@/components/Dashboard/Buttons'
 import Main from '@/components/Dashboard/Main'
+import Bud from '@/components/Dashboard/Bud'
 import Link from "next/link";
 
 export default function Dashboard() {
@@ -68,7 +69,10 @@ export default function Dashboard() {
       <Sidebar />
       <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24">
         <Buttons />
-        <Main />
+        <div className="flex justify-between">
+          <Main />
+          <Bud />
+        </div>
       </div>
     </motion.div>
   );
