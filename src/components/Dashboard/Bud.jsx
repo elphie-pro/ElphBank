@@ -1,7 +1,26 @@
 "use client"
 import Card from '@/components/Dashboard/Card'
+import { useState, useEffect } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db, auth } from '@/firebase-config';
 
 export default function Page() {
+    const [budget, setBudget] = useState([]);
+    const currentUser = auth.currentUser;
+    const collectionRef = doc(db, "users", currentUser.uid);
+  
+    useEffect(() => {
+      const getBudget = async () => {
+        const userDoc = await getDoc(collectionRef);
+        if (userDoc.exists() && userDoc.data().Budgets) {
+          setBudget(userDoc.data().Budgets);
+        } else {
+          console.log("No budgets found for this user");
+          setBudget([]);
+        }
+      };
+      getBudget();
+    }, []);
     return (
         <div className="text-black flex flex-col gap-10">
             {/* Quick Transfer */}
@@ -27,8 +46,16 @@ export default function Page() {
                         </div>
                 </div>
                 {/* Budget Card */}
-                <div>
-                    <Card />
+                <div className='flex justify-between pt-10'>
+                {budget && budget.length > 0 && budget.length == 2 ? (
+                    budget.slice(0,2).map((bud, index) => (
+                    <div key={index}>
+                         <Card key={bud.id} bud={bud}/>
+                    </div>
+                    ))
+                ) : (
+                    <p>No budgets found</p>
+                )}
                 </div>
             </div>
         </div>
