@@ -1,11 +1,13 @@
 "use client"
 import Card from '@/components/Dashboard/Card'
+import Trans from '@/components/Dashboard/Trans'
 import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db, auth } from '@/firebase-config';
 
 export default function Page() {
     const [budget, setBudget] = useState([]);
+    const [transaction, setTransaction] = useState([])
     const currentUser = auth.currentUser;
     const collectionRef = doc(db, "users", currentUser.uid);
   
@@ -18,6 +20,12 @@ export default function Page() {
           console.log("No budgets found for this user");
           setBudget([]);
         }
+        if (userDoc.exists() && userDoc.data().Transactions) {
+            setTransaction(userDoc.data().Transactions);
+          } else {
+            console.log("No Transactions yet found for this user");
+            setTransaction([]);
+          }
       };
       getBudget();
     }, []);
@@ -33,7 +41,7 @@ export default function Page() {
                 </div>
             </div>
             {/* Budgets */}
-            <div className="pt-10">
+            <div className="pt-6">
                 <div className="flex justify-between">
                      <h1 className="text-[1.3rem] font-bold">Budgets</h1> 
                         <div className="flex gap-5">
@@ -47,7 +55,7 @@ export default function Page() {
                 </div>
                 {/* Budget Card */}
                 <div className='flex justify-between pt-10'>
-                {budget && budget.length > 0 && budget.length == 2 ? (
+                {budget && budget.length > 0 ? (
                     budget.slice(0,2).map((bud, index) => (
                     <div key={index}>
                          <Card key={bud.id} bud={bud}/>
@@ -58,6 +66,35 @@ export default function Page() {
                 )}
                 </div>
             </div>
+            {/* Trnsactions heading */}
+             <div className="pt-6">
+                <div className="flex justify-between">
+                     <h1 className="text-[1.3rem] font-bold">Transactions</h1> 
+                        <div className="flex gap-5">
+                            <button className=" w-[11rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer">
+                                View Trasactions
+                            </button>
+                        </div>
+                </div>
+                <div className='flex justify-between pt-4 text-[#818f96]'>
+                            <p className='text-[.9rem]'>Name of transaction</p>
+                            <p className='text-[.9rem]'>Description</p>
+                            <p className='text-[.9rem]'>Date & Time</p>
+                            <p className='text-[.9rem]'>Amount</p>
+                        </div>
+                </div>
+                {/* Transactions */}
+                <div className='flex  flex-col gap-5 mt-[-2rem]'>
+                {transaction && transaction.length > 0 ? (
+                    transaction.slice(0,2).map((tran, index) => (
+                    <div key={index}>
+                         <Trans key={tran.id} tran={tran}/>
+                    </div>
+                    ))
+                ) : (
+                    <p>No transactions found</p>
+                )}
+                </div>
         </div>
     );
 }
