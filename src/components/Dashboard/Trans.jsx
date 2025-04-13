@@ -28,7 +28,7 @@ export default function Page({tran}) {
             <p>{tran.accountName}</p>
             <p>{tran.Description}</p>
             <p>{dateTime}</p>
-            <p>{tran.amout}</p>
-        </div>
+            <p>₦{tran.amout}</p>
+        </div> 
     );
 }

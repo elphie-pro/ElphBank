@@ -32,9 +32,9 @@ export default function Page() {
                 <Image src='/control panel.svg' width={30} height={10} alt="con"/>
                 <Link href="/dashboard" className="pl-2 pt-1">Dashboard</Link>
               </li>
-              <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+              <li className={path === '/transfer' ?  "font-bold flex text-underline": "text-white flex text-center"}>
                 <Image src='/Exchange.svg' width={30} height={10} alt="con"/>
-                <Link href="/" className="pl-2 pt-1">Transfers</Link>
+                <Link href="/transfer" className="pl-2 pt-1">Transfers</Link>
               </li>
               <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
                 <Image src='/Insert Card.svg' width={30} height={10} alt="con"/>
