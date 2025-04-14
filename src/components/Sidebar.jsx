@@ -3,6 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import { auth } from "@/firebase-config";
+import { signOut } from "firebase/auth";
+
 
 export default function Page() {
   const [open, setOpen] = useState(false);
@@ -12,6 +16,17 @@ export default function Page() {
   const handleToggle = () => {
     setOpen((prev) => !prev);
   };
+  
+      const logOut = async() => {
+          try{
+              await signOut(auth)
+              toast.success('You have successfully signed out')
+              route.push('/')
+          }
+          catch(error) {
+              toast.error(error)
+          }
+      }
   return (
     <div className="bg-[#2EC4B6] h-screen w-[18rem] fixed overflow-y-hidden hidden md:block">
       <div className="py-7 px-4 md:pb-">
@@ -36,10 +51,7 @@ export default function Page() {
                 <Image src='/Exchange.svg' width={30} height={10} alt="con"/>
                 <Link href="/transfer" className="pl-2 pt-1">Transfers</Link>
               </li>
-              <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
-                <Image src='/Insert Card.svg' width={30} height={10} alt="con"/>
-                <Link href="/" className="pl-2 pt-1">Withdraw</Link>
-              </li>
+              
               <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
                 <Image src='/Accounting.svg' width={30} height={10} alt="con"/>
                 <Link href="/" className="pl-2 pt-1">Budgets</Link>
@@ -48,14 +60,18 @@ export default function Page() {
                 <Image src='/Ledger.svg' width={30} height={10} alt="con"/>
                 <Link href="/" className="pl-2 pt-1">History</Link>
               </li>
+              <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+                <Image src='/Help.svg' width={30} height={10} alt="con"/>
+                <Link href="/" className="pl-2 pt-1">Help</Link>
+              </li>
             </ul>
           </div>
           <div className="hidden md:block">
             <div className="flex flex-col gap-[5rem] pt-[15rem] pl-2">
-            <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
-                <Image src='/Help.svg' width={30} height={10} alt="con"/>
-                <Link href="/" className="pl-2 pt-1">Help</Link>
-              </li>
+            <button className="font-semibold flex cursor-pointer" onClick={logOut}>
+                <Image src='/Move Up.svg' width={30} height={10} alt="con"/>
+                <h2 className="pl-2 pt-1">Sign Out</h2>
+              </button>
             </div>
           </div>
           </nav>
