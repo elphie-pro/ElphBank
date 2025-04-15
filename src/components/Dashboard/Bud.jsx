@@ -32,19 +32,20 @@ export default function Page() {
     return (
         <div className="text-black flex flex-col gap-10">
             {/* Quick Transfer */}
-            <div>
+            <div className='pt-10 md:pt-0'>
                 <h1 className="text-[1.3rem] font-bold">Quick Transfer</h1> 
-                <div className="flex gap-4 pt-10">
-                    <input type="text" placeholder="Enter Account id or Email" className="w-[24rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg"/>
-                    <input type="text" placeholder="Enter Account id or Email" className="w-[19rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg"/>
-                    <button className="w-[2.5rem] h-[2.5rem] bg-[#2ec4b6] text-white rounded-lg text-[1.5rem]">&gt;</button>
+                <div className="flex flex-col gap-5 md:flex-row items-center pt-10">
+                    <input type="text" placeholder="Enter Account id or Email" className="w-[19rem] md:w-[24rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg"/>
+                    <input type="number" placeholder="Enter Amount" className="w-[19rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg"/>
+                    <button className="w-[2.5rem] h-[2.5rem] bg-[#2ec4b6] text-white rounded-lg text-[1.5rem] hidden md:block">&gt;</button>
+                    <button className="w-[19rem] h-[2.5rem] bg-[#2ec4b6] text-white rounded-lg font-semibold md:hidden block">Transfer</button>
                 </div>
             </div>
             {/* Budgets */}
             <div className="pt-6">
-                <div className="flex justify-between">
+                <div className="flex  justify-between">
                      <h1 className="text-[1.3rem] font-bold">Budgets</h1> 
-                        <div className="flex gap-5">
+                        <div className="flex gap-5 hidden md:block">
                         <button className=" w-[9rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer">
                             View Budgets
                         </button>
@@ -54,7 +55,7 @@ export default function Page() {
                         </div>
                 </div>
                 {/* Budget Card */}
-                <div className='flex justify-between pt-10'>
+                <div className='flex flex-col md:flex-row gap-10 items-center justify-between pt-10'>
                 {budget && budget.length > 0 ? (
                     budget.slice(0,2).map((bud, index) => (
                     <div key={index}>
@@ -70,15 +71,16 @@ export default function Page() {
              <div className="pt-6">
                 <div className="flex justify-between">
                      <h1 className="text-[1.3rem] font-bold">Transactions</h1> 
-                        <div className="flex gap-5">
+                        <div className="flex gap-5 hidden md:block">
                             <button className=" w-[11rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer">
                                 View Trasactions
                             </button>
                         </div>
                 </div>
                 <div className='flex justify-between pt-4 text-[#818f96]'>
-                            <p className='text-[.9rem]'>Name of transaction</p>
-                            <p className='text-[.9rem]'>Description</p>
+                            <p className='text-[.9rem] hidden md:block'>Name of transaction</p>
+                            <p className='text-[.9rem] md:hidden block'>Account Name</p>
+                            <p className='text-[.9rem] hidden md:block'>Description</p>
                             <p className='text-[.9rem]'>Date & Time</p>
                             <p className='text-[.9rem]'>Amount</p>
                         </div>

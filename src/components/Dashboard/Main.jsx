@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 
 export default function Page() {
     return (
-        <div className="text-black ml-[15rem] flex justify-between">
-            <div className="flex flex-col gap-14">
+        <div className="text-black md:ml-[15rem] flex justify-center md:justify-start">
+            <div className="flex flex-col gap-14 items-center">
                 <h3 className="text-[1.3rem] font-bold">Your Balance is ₦360,000<span className="text-[#818f96]">.25</span></h3>
                 <div className="pt-8">
                     <Image src='/Group 23.svg' width={300} height={10} alt="pic"/>

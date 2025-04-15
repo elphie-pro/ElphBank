@@ -2,6 +2,8 @@
 
 export default function Page({tran}) {
     let dateTime = "No date";
+    let datet = "No data"
+    let timet = "No time"
     
     // Check if tran.Time exists and has seconds property
     if (tran && tran.Time && tran.Time.seconds) {
@@ -20,14 +22,20 @@ export default function Page({tran}) {
         
         // Format as MM-DD-YY || HH:MM:SS
         dateTime = `${month}-${day}-${year} || ${hours}:${minutes}:${seconds}`;
+        datet = `${month}-${day}-${year}`
+        timet  = `${hours}:${minutes}:${seconds}`
         console.log("Custom formatted date and Time:", dateTime);
     }
 
     return (
         <div className="flex h-[3.5rem] rounded-xl border-2 border-[#2ec4b6] p-3  -px-5 justify-between">
             <p>{tran.accountName}</p>
-            <p>{tran.Description}</p>
-            <p>{dateTime}</p>
+            <p className="hidden md:block">{tran.Description}</p>
+            <p className="hidden md:block">{dateTime}</p>
+            <div className="flex flex-col md:hidden block mt-[-.5rem]">
+                <p>{datet}</p>
+                <p>{timet}</p>
+            </div>
             <p>₦{tran.amout}</p>
         </div> 
     );
