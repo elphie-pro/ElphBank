@@ -67,7 +67,7 @@ export default function Dashboard() {
         </div>
       </nav>
       <Sidebar />
-      <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24">
+      <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
         <Buttons />
         <div className="flex justify-between flex-col md:flex-row">
           <Main />

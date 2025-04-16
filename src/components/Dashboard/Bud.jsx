@@ -88,7 +88,7 @@ export default function Page() {
                 {/* Transactions */}
                 <div className='flex  flex-col gap-5 mt-[-2rem]'>
                 {transaction && transaction.length > 0 ? (
-                    transaction.slice(0,2).map((tran, index) => (
+                    transaction.slice(0,3).map((tran, index) => (
                     <div key={index}>
                          <Trans key={tran.id} tran={tran}/>
                     </div>
@@ -96,6 +96,10 @@ export default function Page() {
                 ) : (
                     <p>No transactions found</p>
                 )}
+                </div>
+                {/* copyright */}
+                <div className="mt-[-1.4rem]">
+                        <p className="md:text-[.9rem] ml-[25.3rem] text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
                 </div>
         </div>
     );

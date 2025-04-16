@@ -67,10 +67,10 @@ export default function Page() {
             </ul>
           </div>
           <div className="hidden md:block">
-            <div className="flex flex-col gap-[5rem] pt-[15rem] pl-2">
-            <button className="font-semibold flex cursor-pointer" onClick={logOut}>
-                <Image src='/Move Up.svg' width={30} height={10} alt="con"/>
-                <h2 className="pl-2 pt-1">Sign Out</h2>
+            <div className="flex flex-col gap-[5rem] pt-[18rem] pl-2">
+              <button className="font-semibold flex cursor-pointer" onClick={logOut}>
+                  <Image src='/Move Up.svg' width={30} height={10} alt="con"/>
+                  <h2 className="pl-2 pt-1">Sign Out</h2>
               </button>
             </div>
           </div>

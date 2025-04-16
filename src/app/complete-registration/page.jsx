@@ -81,6 +81,9 @@ export default function Page() {
                  </div>
                 </div>    
             </div>    
+            <div className="md:pt-[9rem] pt-18 md:pl-16 pl-4">
+                        <p className="md:text-[.9rem] text-[.7rem] text-[white] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
+            </div>
         </motion.div>
         </>
         

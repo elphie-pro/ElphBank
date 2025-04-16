@@ -29,8 +29,8 @@ export default function Page({tran}) {
 
     return (
         <div className="flex h-[3.5rem] rounded-xl border-2 border-[#2ec4b6] p-3  -px-5 justify-between">
-            <p>{tran.accountName}</p>
-            <p className="hidden md:block">{tran.Description}</p>
+            <p className="md:w-[10rem] w-[7rem] mt-[-.5rem] md:mt-0">{tran.accountName}</p>
+            <p className="hidden md:block md:w-[9rem] text-center">{tran.Description}</p>
             <p className="hidden md:block">{dateTime}</p>
             <div className="flex flex-col md:hidden block mt-[-.5rem]">
                 <p>{datet}</p>
