@@ -28,10 +28,10 @@ export default function Page() {
           }
       }
   return (
-    <div className="bg-[#2EC4B6] h-screen w-[18rem] fixed overflow-y-hidden hidden md:block">
+    <div className="bg-[#2EC4B6] h-screen md:w-[18rem] fixed overflow-y-hidden ">
       <div className="py-7 px-4 md:pb-">
         <nav className="py-6 flex flex-col gap-[10rem] justify-between">
-          <div className="w-[10rem]">
+          <div className="w-[10rem] hidden md:block">
             <Link href="/" className="md:absolute">
               <Image
                 src="/Group 5.png"
@@ -74,6 +74,14 @@ export default function Page() {
               </button>
             </div>
           </div>
+          <button onClick={handleToggle} className="md:hidden block absolute w-[10rem] mt-[-4rem]"><Image src='/Group 122.png' width={30} height={50} alt="toggle"/></button>
+                      <div
+                        className={`${
+                          !open ? "hidden" : "block"
+                        } md:hidden bg-[#2EC4B6] shadow-2xl absolute top-16 right-0 w-[10rem] p-8`}
+                      >
+
+                      </div>
           </nav>
           </div>
           </div>

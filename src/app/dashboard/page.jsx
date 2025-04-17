@@ -55,7 +55,7 @@ export default function Dashboard() {
   return (
     <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full min-h-screen'>
       <nav className="bg-[#2ec4b6] w-full p-4 md:hidden block">
-        <div className="w-[10rem] ">
+        <div className="w-[10rem] ml-[13rem]">
             <Link href="/" className="">
               <Image
                 src="/Group 5.png"

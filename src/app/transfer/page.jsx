@@ -13,7 +13,7 @@ export default function Page() {
       };
     return (
          <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full overflow-hidden min-h-screen'>
-            <nav className="bg-[#2ec4b6] w-full p-4 md:hidden block">
+            <nav className="bg-[#2ec4b6] absolute w-full p-4 md:hidden block">
                 <div className="w-[10rem] ">
                     <Link href="/" className="">
                     <Image
