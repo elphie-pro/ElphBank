@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Sidebar from '@/components/Sidebar'
 import Button from '@/components/Dashboard/Buttons'
+import Budget from '@/components/Budget/budge'
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,6 +29,7 @@ export default function Page() {
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
                 <h1 className=' ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Budgets</h1>
                 <Button />
+                <Budget />
             </div>
         </motion.div>
     );
