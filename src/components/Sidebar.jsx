@@ -52,9 +52,9 @@ export default function Page() {
                 <Link href="/transfer" className="pl-2 pt-1">Transfers</Link>
               </li>
               
-              <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+              <li className={path === '/budget' ?  "font-bold flex text-underline": "text-white flex text-center"}>
                 <Image src='/Accounting.svg' width={30} height={10} alt="con"/>
-                <Link href="/" className="pl-2 pt-1">Budgets</Link>
+                <Link href="/budget" className="pl-2 pt-1">Budgets</Link>
               </li>
               <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
                 <Image src='/Ledger.svg' width={30} height={10} alt="con"/>

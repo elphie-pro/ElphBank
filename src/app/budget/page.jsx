@@ -1,10 +1,9 @@
 "use client"
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import Sidebar from '@/components/Sidebar'
 import Button from '@/components/Dashboard/Buttons'
-import Transfer from '@/components/Transfers/transfe'
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
     const variants = {
@@ -12,7 +11,7 @@ export default function Page() {
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
     return (
-         <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full overflow-hidden min-h-screen'>
+        <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full overflow-hidden min-h-screen'>
             <nav className="bg-[#2ec4b6] absolute w-full p-4 md:hidden block">
                 <div className="w-[10rem] ">
                     <Link href="/" className="">
@@ -27,9 +26,8 @@ export default function Page() {
             </nav>
             <Sidebar />
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
-                <h1 className=' ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Send Money</h1>
+                <h1 className=' ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Budgets</h1>
                 <Button />
-                <Transfer />
             </div>
         </motion.div>
     );
