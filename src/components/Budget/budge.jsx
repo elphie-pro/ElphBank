@@ -41,9 +41,9 @@ export default function Page() {
                             Add Budget +
                         </button>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between pt-4'>
                     {budget && budget.length > 0 ? (
-                        budget.slice(0,2).map((bud, index) => (
+                        budget.map((bud, index) => (
                         <div key={index}>
                                 <Card key={bud.id} bud={bud}/>
                         </div>
