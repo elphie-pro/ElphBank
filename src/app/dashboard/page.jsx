@@ -11,11 +11,13 @@ import Buttons from '@/components/Dashboard/Buttons'
 import Main from '@/components/Dashboard/Main'
 import Bud from '@/components/Dashboard/Bud'
 import Link from "next/link";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function Dashboard() {
   const router = useRouter();
   const [user, setUser] = useState(null);
-  const [username, setUsername] = useState(null);
+  const [username, setUsername] = useState(null)
+  const [userData, setUserData] = useState([])
 
   const variants = {
     hidden: { opacity: 0 },
@@ -50,6 +52,27 @@ export default function Dashboard() {
     return () => unsubscribe();
   }, [router]);
 
+useEffect(() => {
+  const fetchUserData = () => {
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const userDoc = doc(db, 'users', user.uid);
+        const docSnap = await getDoc(userDoc);
+
+        if (docSnap.exists()) {
+          setUserData(docSnap.data());
+        } else {
+          console.log("No such document!");
+        }
+      } else {
+        console.log("No user is logged in");
+      }
+    });
+  };
+
+  fetchUserData();
+}, [])
+
   if (!user) return <p>Redirecting...</p>;
 
   return (
@@ -68,7 +91,7 @@ export default function Dashboard() {
       </nav>
       <Sidebar />
       <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
-      <h1 className=' ml-[20rem] mt-[1rem] md:ml-[15rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Welcome Back, John.</h1>
+      <h1 className=' ml-[20rem] mt-[1rem] md:ml-[15rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Welcome Back, {userData ? userData.name : 'Name'}.</h1>
         <Buttons />
         <div className="flex justify-between flex-col md:flex-row">
           <Main />

@@ -41,7 +41,7 @@ export default function Page() {
                             Add Budget +
                         </button>
                 </div>
-                <div className='flex justify-between pt-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[9rem] pt-8'>
                     {budget && budget.length > 0 ? (
                         budget.map((bud, index) => (
                         <div key={index}>
