@@ -5,12 +5,46 @@ import Button from '@/components/Dashboard/Buttons'
 import Budget from '@/components/Budget/budge'
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { auth, db } from "@/firebase-config";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function Page() {
     const variants = {
         hidden: { opacity: 0 },
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
+      const router  = useRouter()
+      const [user, setUser] = useState(null);
+      const [username, setUsername] = useState(null)
+      useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged( async(user) => {
+          if (!user) {
+            router.push("/login"); 
+          }
+            else {
+              setUser(user);
+      
+              try {
+                const userDocRef = doc(db, 'users', user.uid);
+                const userDoc = await getDoc(userDocRef);
+        
+                if (userDoc.exists()) {
+                  const userData = userDoc.data();
+                  setUsername(userData.username);
+                }
+              } catch (error) {
+                console.error("Error fetching user data:", error);
+              }
+            }
+          
+        });
+    
+        
+    
+        return () => unsubscribe();
+      }, [router]);
     return (
         <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full overflow-hidden min-h-screen'>
             <nav className="bg-[#2ec4b6] absolute w-full p-4 md:hidden block">
