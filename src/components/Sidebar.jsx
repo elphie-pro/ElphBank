@@ -28,7 +28,20 @@ export default function Page() {
           }
       }
   return (
-    <div className="bg-[#2EC4B6] h-screen md:w-[18rem] fixed overflow-y-hidden ">
+    <div>
+      <nav className="bg-[#2ec4b6] pt-4 h-[5rem] p-4 md:hidden block">
+          <div className="w-[10rem] ml-[13rem] mt-[.5rem]">
+              <Link href="/" className="">
+                <Image
+                  src="/Group 5.png"
+                  width={150}
+                  height={38}
+                  alt="ElphBank Logo"
+                />
+              </Link>
+          </div>
+        </nav>
+      <div className="bg-[#2EC4B6] h-screen md:w-[18rem] fixed overflow-y-hidden ">
       <div className="py-7 px-4 md:pb-">
         <nav className="py-6 flex flex-col gap-[10rem] justify-between">
           <div className="w-[10rem] hidden md:block">
@@ -74,7 +87,7 @@ export default function Page() {
               </button>
             </div>
           </div>
-          <button onClick={handleToggle} className="md:hidden block absolute w-[10rem] mt-[-4rem]"><Image src='/Group 122.png' width={30} height={50} alt="toggle"/></button>
+          <button onClick={handleToggle} className="md:hidden block absolute w-[10rem] mt-[-5rem]"><Image src='/Group 122.png' width={30} height={50} alt="toggle"/></button>
                       <div
                         className={`${
                           !open ? "hidden" : "block"
@@ -85,4 +98,6 @@ export default function Page() {
           </nav>
           </div>
           </div>
+    </div>
+    
   )}
