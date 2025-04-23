@@ -49,7 +49,7 @@ export default function Page() {
             const user = userCredential.user;
     
             await setDoc(doc(db, 'users', user.uid), {
-                username: username,
+                name: username,
                 email: email,
                 password: password,
                 createdAt: new Date()

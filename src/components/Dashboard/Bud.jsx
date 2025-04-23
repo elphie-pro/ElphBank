@@ -99,10 +99,7 @@ export default function Page() {
                     <p>No transactions found</p>
                 )}
                 </div>
-                {/* copyright */}
-                <div className="mt-[-1.4rem]">
-                        <p className="md:text-[.9rem] md:ml-[25.3rem] ml-[4.5rem] text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
-                </div>
+                
         </div>
     );
 }

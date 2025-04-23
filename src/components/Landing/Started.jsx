@@ -31,7 +31,7 @@ export default function Page() {
             <div>
               <ScrollAnimation from={200} to={0} className="">
                 <Image
-                  src="/group 11.png"
+                  src="/group 11.svg"
                   width={600}
                   height={50}
                   alt="Phone"
