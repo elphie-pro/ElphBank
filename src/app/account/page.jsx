@@ -4,6 +4,7 @@ import Sidebar from '@/components/Sidebar'
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Account & Settings/head'
+import Body from '@/components/Account & Settings/bod'
 
 export default function Page() {
     const variants = {
@@ -27,6 +28,7 @@ export default function Page() {
             <Sidebar />
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
                 <Header />
+                <Body />
             </div>
         </motion.div>
     );
