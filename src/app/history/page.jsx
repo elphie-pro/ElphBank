@@ -61,7 +61,7 @@ export default function Page() {
             </nav>
             <Sidebar />
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
-                <h1 className=' ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Transaction History</h1>
+                <h1 className=' ml-[18rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Transaction History</h1>
                 <Button />
                 <Hist />
             </div>
