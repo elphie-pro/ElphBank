@@ -1,18 +1,20 @@
 "use client"
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { getDoc, doc } from "firebase/firestore";
 import { db, auth } from "@/firebase-config";
 
 export default function Page() {
   const [userData, setUserData] = useState([])
+  const [docId, setDocId] = useState("")
 
 
     useEffect(() => {
         const fetchUserData = () => {
           onAuthStateChanged(auth, async (user) => {
             if (user) {
+                setDocId(user.uid)
               const userDoc = doc(db, 'users', user.uid);
               const docSnap = await getDoc(userDoc);
       
@@ -34,7 +36,7 @@ export default function Page() {
             <div className="w-[60rem] h-[40rem] bg-[#cbf3f0] rounded-tl-4xl rounded-br-4xl flex flex-col gap-4 p-8 items-center">
                 <div className="flex flex-col gap-1 items-center">
                       <button className="cursor-pointer"><Image src={'/Group 28.svg'} width={200} height={20} alt="s"/></button>
-                      <p className="text-[1.3rem] font-bold">User ID : <span>aA7nJY9jkLdzSNN9jJWzNK2sBB43</span></p>
+                      <p className="text-[1.3rem] font-bold">User ID : <span>{docId || "Loading..."}</span></p>
                 </div>
                 <div className="flex flex-col gap-5 items-center">
                     <p className="text-[1.25rem] text-[#2ec4b6] font-bold">Account Information</p>
