@@ -29,6 +29,10 @@ export default function Page() {
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
                 <Header />
                 <Body />
+                {/* copyright */}
+        <div className="mt-[6rem] ml-[50rem]">
+            <p className="md:text-[.9rem] md:ml-[25.3rem]  text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
+        </div>
             </div>
         </motion.div>
     );
