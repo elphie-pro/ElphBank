@@ -76,8 +76,7 @@ useEffect(() => {
   if (!user) return <p>Redirecting...</p>;
 
   return (
-    <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full min-h-screen'>
-      
+    <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full min-h-screen flex flex-col md:flex-row'>
       <Sidebar />
       <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2 pb-1">
       <h1 className=' ml-[2rem] md:mt-[1rem] md:ml-[15rem] md:absolute md:text-[2.3rem] text-[2rem] pb-3 text-[#2ec4b6] font-bold'>Welcome Back, {userData ? userData.name : 'Name'}.</h1>

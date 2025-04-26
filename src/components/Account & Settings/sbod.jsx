@@ -2,14 +2,17 @@
 import Image from "next/image";
 import { useState, useEffect, use } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { getDoc, doc } from "firebase/firestore";
+import { getDoc, doc, updateDoc } from "firebase/firestore";
 import { db, auth } from "@/firebase-config";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function Page() {
   const [userData, setUserData] = useState([])
   const [docId, setDocId] = useState("")
   const [newName, setNewName] = useState("")
   const [newNumber, setNewNumber] = useState(0)
+  const route = useRouter()
 
 
     useEffect(() => {
@@ -32,7 +35,25 @@ export default function Page() {
         };
       
         fetchUserData();
+
       }, [])
+
+      const updateDetails = async() => {
+        try {
+          onAuthStateChanged(auth, async (user) => {
+            const userDoc = doc(db, 'users', user.uid);
+             await updateDoc(userDoc, {
+               name: newName,
+               number: newNumber
+             })
+             route.push('/account')
+             toast.success('Account details updated')
+            })
+        } catch (error) {
+          toast.error(error)
+        }
+      }
+      
     return (
         <div className="md:ml-[25rem] mt-[5rem] text-black">
             <div className="md:w-[60rem] h-[40rem] bg-[#cbf3f0] rounded-tl-4xl rounded-br-4xl flex flex-col gap-4 p-8 items-center">

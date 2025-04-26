@@ -87,7 +87,7 @@ export default function Page() {
               </button>
             </div>
           </div>
-          <button onClick={handleToggle} className="md:hidden block absolute w-[10rem] mt-[-5rem]"><Image src='/Group 122.png' width={30} height={50} alt="toggle"/></button>
+          <button onClick={handleToggle} className="md:hidden block absolute w-[10rem] mt-[-20rem]"><Image src='/Group 122.png' width={30} height={50} alt="toggle"/></button>
                       <div
                         className={`${
                           !open ? "hidden" : "block"
