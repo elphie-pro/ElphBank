@@ -44,7 +44,7 @@ export default function Page() {
             const userDoc = doc(db, 'users', user.uid);
              await updateDoc(userDoc, {
                name: newName,
-               number: newNumber
+               Number: newNumber
              })
              route.push('/account')
              toast.success('Account details updated')
@@ -73,7 +73,7 @@ export default function Page() {
                             <input type="number" className="border-3 border-[#cbf3f0] outline-none rounded-lg" onChange={(e) => {setNewNumber(e.target.value)}}/>  
                         </div>
                         <div className="text-center text-black font-semibold">
-                            <button className="w-[15rem] h-[2.5rem] bg-[#cbf3f0] rounded-xl ">Update Information</button>
+                            <button className="w-[15rem] h-[2.5rem] bg-[#cbf3f0] rounded-xl " onClick={updateDetails}>Update Information</button>
                         </div>
                     </div>  
                 </div>
