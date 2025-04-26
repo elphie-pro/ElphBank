@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 
 export default function Page() {
     const [accountType, setAccountType] = useState("Personal Account")
-    const [deposit, setDeposit] = useState(0)
+    const [deposit, setDeposit] = useState(50000)
     const route = useRouter()
 
     const variants = {
@@ -24,7 +24,7 @@ export default function Page() {
                 try{
                     await setDoc(doc(db, "users", user.uid), {
                         accountType: accountType,
-                        balance: deposit
+                        balance: Number(deposit)
                     }, { merge: true })
                     route.push('/dashboard')
                     toast.success('Account Succesfully Created')
@@ -67,7 +67,7 @@ export default function Page() {
                             <div className="pt-3">
                                     <label htmlFor="" className="text-[1rem] font-semibold">Deposit</label>
                                     <br />
-                                    <input type="number" placeholder="min $5000" required onChange={(e) => {
+                                    <input type="number" placeholder="min ₦50,000" required onChange={(e) => {
                                         setDeposit(e.target.value)
                                     }} className="border-2 border-white w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 rounded-tr-xl font-medium rounded-bl-xl placeholder-[#757575] p-2 outline-none"/>    
                                 </div>
