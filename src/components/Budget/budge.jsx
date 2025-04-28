@@ -4,10 +4,12 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db, auth } from '@/firebase-config';
 import { onAuthStateChanged } from 'firebase/auth';
 import Card from '@/components/Dashboard/Card'
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
     const [budget, setBudget] = useState([]);
     const [user, setUser] = useState(null)
+    const route = useRouter()
 
     useEffect(() => {
         // Set up auth state listener
@@ -37,7 +39,7 @@ export default function Page() {
         <div className="text-black md:ml-[15rem] mt-[5rem]">
             <div className="md:ml-[5rem] md:w-[78rem] md:h-[45rem] border-8 border-[#cbf3f0] rounded-tr-4xl rounded-bl-4xl p-8">
                 <div className="ml-[64rem]">
-                        <button className="border-3 w-[9rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer text-[#2ec4b6] border-[#2ec4b6]">
+                        <button className="border-3 w-[9rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer text-[#2ec4b6] border-[#2ec4b6]" onClick={() => {route.push('/new-budget')}}>
                             Add Budget +
                         </button>
                 </div>

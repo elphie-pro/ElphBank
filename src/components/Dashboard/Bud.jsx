@@ -4,12 +4,14 @@ import Trans from '@/components/Dashboard/Trans'
 import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db, auth } from '@/firebase-config';
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
     const [budget, setBudget] = useState([]);
     const [transaction, setTransaction] = useState([])
     const currentUser = auth.currentUser;
     const collectionRef = doc(db, "users", currentUser.uid);
+    const route = useRouter()
   
     useEffect(() => {
       const getBudget = async () => {
@@ -47,10 +49,10 @@ export default function Page() {
                      <h1 className="text-[1.3rem] font-bold">Budgets</h1>
                      <div className='hidden md:block'>
                         <div className="flex gap-5 ">
-                            <button className=" w-[9rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer">
+                            <button className=" w-[9rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer" onClick={() => {route.push('/budget')}}>
                                 View Budgets
                             </button>
-                            <button className="border-3 w-[9rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer text-[#2ec4b6] border-[#2ec4b6]">
+                            <button className="border-3 w-[9rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer text-[#2ec4b6] border-[#2ec4b6]" onClick={() => {route.push('/new-budget')}}>
                                 Add Budget +
                             </button>
                         </div>
@@ -74,7 +76,7 @@ export default function Page() {
                 <div className="flex justify-between">
                      <h1 className="text-[1.3rem] font-bold">Transactions</h1> 
                         <div className="flex gap-5 hidden md:block">
-                            <button className=" w-[11rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer">
+                            <button className=" w-[11rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer" onClick={() => {route.push('/history')}}>
                                 View Trasactions
                             </button>
                         </div>
