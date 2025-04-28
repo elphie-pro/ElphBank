@@ -1,6 +1,4 @@
 "use client"
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 export default function Page() {
     return (
         <div className="text-black md:ml-[35rem] mt-[7rem]">
