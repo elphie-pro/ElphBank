@@ -35,7 +35,7 @@ export default function Page() {
     }, [user]);
     return (
         <div className="text-black md:ml-[15rem] mt-[5rem]">
-            <div className="ml-[5rem] md:w-[78rem] h-[45rem] border-8 border-[#cbf3f0] rounded-tr-4xl rounded-bl-4xl p-8">
+            <div className="md:ml-[5rem] md:w-[78rem] md:h-[45rem] border-8 border-[#cbf3f0] rounded-tr-4xl rounded-bl-4xl p-8">
                 <div className="ml-[64rem]">
                         <button className="border-3 w-[9rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer text-[#2ec4b6] border-[#2ec4b6]">
                             Add Budget +
@@ -53,10 +53,7 @@ export default function Page() {
                     )}
                 </div>
             </div>
-            {/* copyright */}
-            <div className="mt-[1rem] ml-[35rem]">
-                        <p className="md:text-[.9rem] md:ml-[25.3rem]  text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
-              </div>
+            
         </div>
     );
 }

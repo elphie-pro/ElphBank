@@ -61,9 +61,13 @@ export default function Page() {
             </nav>
             <Sidebar />
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
-                <h1 className=' ml-[18rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Transaction History</h1>
+                <h1 className=' md:ml-[18rem] mt-[1rem] absolute text-[2rem] md:text-[2.3rem] text-[#2ec4b6] font-bold'>Transaction History</h1>
                 <Button />
                 <Hist />
+                {/* copyright */}
+            <div className="mt-[28rem] md:ml-[75rem]">
+                 <p className="md:text-[.9rem]  text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
+             </div>
             </div>
         </motion.div>
     );

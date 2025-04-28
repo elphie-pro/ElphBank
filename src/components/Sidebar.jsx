@@ -41,11 +41,11 @@ export default function Page() {
               </Link>
           </div>
         </nav>
-      <div className="bg-[#2EC4B6] h-screen md:w-[18rem] fixed overflow-y-hidden ">
+      <div className="bg-[#2EC4B6] h-screen md:w-[18rem] fixed overflow-y-hidden hidden md:block">
       <div className="py-7 px-4 md:pb-">
         <nav className="py-16 flex flex-col gap-[10rem] justify-between">
           <div className="w-[10rem] hidden md:block">
-            <Link href="/" className="md:absolute">
+            <Link href="/dashboard" className="md:absolute">
               <Image
                 src="/Group 5.png"
                 width={150}

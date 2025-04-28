@@ -21,9 +21,6 @@ export default function Page() {
                     <button className="md:w-[45rem] h-[3.5rem] text-white font-semibold bg-[#2ec4b6] rounded-2xl">Transfer Amount</button>
                 </div>
             </div>
-            <div className="mt-[8rem] ml-[18rem]">
-                        <p className="md:text-[.9rem] ml-[25.3rem] text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
-            </div>
         </div>
     );
 }

@@ -60,10 +60,14 @@ export default function Page() {
                 </div>
             </nav>
             <Sidebar />
-            <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
-                <h1 className=' ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Budgets</h1>
+            <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb">
+                <h1 className=' md:ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Budgets</h1>
                 <Button />
                 <Budget />
+                {/* copyright */}
+              <div className="mt-[1rem] md:ml-[35rem] ml-[2rem]">
+                    <p className="md:text-[.9rem]   text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
+              </div>
             </div>
         </motion.div>
     );

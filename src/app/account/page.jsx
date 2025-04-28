@@ -30,8 +30,8 @@ export default function Page() {
                 <Header />
                 <Body />
                 {/* copyright */}
-        <div className="mt-[6rem] ml-[50rem]">
-            <p className="md:text-[.9rem] md:ml-[25.3rem]  text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
+        <div className="mt-[6rem] md:ml-[75rem] ml-[2rem]">
+            <p className="md:text-[.9rem]  text-[.7rem] text-[#2EC4BE] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
         </div>
             </div>
         </motion.div>

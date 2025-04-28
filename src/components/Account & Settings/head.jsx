@@ -13,8 +13,12 @@ export default function Page() {
                     <button  className="cursor-pointer" onClick={() => {route.back()}}><Image src={'/Group 31.svg'} width={45} height={20} alt="s"/></button>
                     <button className={path === "/account" ? "cursor-pointer" : "hidden"}  onClick={() => {route.push('/settings')}}><Image src={'/Group 26.svg'} width={50} height={20} alt="s"/></button>
                 </div>
-                <div>
-                    <h1 className="md:text-[2.3rem] text-[#2ec4b6] font-bold">My Account</h1>
+                <div >
+                    {path === '/account' ? (
+                        <h1 className="md:text-[2.3rem] text-[2rem] text-[#2ec4b6] font-bold">My Account</h1>
+                    ) : (
+                        <h1 className="md:text-[2.3rem] text-[2rem] text-[#2ec4b6] font-bold">Edit Account</h1>
+                    )}
                 </div>
             </div>
         </div>
