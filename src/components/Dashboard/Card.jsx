@@ -11,7 +11,7 @@ export default function Page({ bud }) {
           <h2>Current Balance: <span className="font-bold">₦ {bud.currentAmount ? bud.currentAmount.toLocaleString() : bud.currentAmount}</span></h2>
         </div>
         <div className="md:pl-[8rem] pl-[6rem]">
-          <button className="bg-white border-1 text-[#2ec4b6] border-[#2ec4b6] w-[7rem] h-[2rem] font-light rounded-xl text-[1rem] cursor-pointer">Edit Budget</button>
+          <button className="bg-[#ff0000] text-white w-[8rem] h-[2rem] font-light rounded-xl text-[1rem] cursor-pointer shadow-[3px_3px_#99b7b5]">Delete Budget</button>
         </div>
     </div>
   );
