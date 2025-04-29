@@ -49,25 +49,27 @@ export default function Page() {
         {/* Pop up */}
                 {show && (
                   <div className='fixed bg-black/50 min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0' onClick={() => {setShow(false)}}>
-                      <ScrollAnimation yfrom={200} onClick={(e) => {e.stopPropagation()}} className='bg-[#cbf3f0] h-[25rem] md:w-[30rem] rounded-2xl flex flex-col gap-5 p-6'>
-                        <div className='flex justify-between'>
-                          <h2 className='text-[2rem] font-semibold'>New Budget</h2>
-                          <button onClick={() => {setShow(false)}} 
-                          className="cursor-pointer"><Image src={'/material-symbols_cancel-outline.svg'} width={50} height={20} alt="s"/></button>
-                          
+                    <div onClick={(e) => {e.stopPropagation()}}>
+                      <ScrollAnimation yfrom={200} className='bg-[#cbf3f0] h-[25rem] md:w-[30rem] rounded-2xl flex flex-col gap-5 p-6' >
+                          <div className='flex justify-between'>
+                            <h2 className='text-[2rem] font-bold'>New Budget</h2>
+                            <button onClick={() => {setShow(false)}} 
+                            className="cursor-pointer"><Image src={'/material-symbols_cancel-outline.svg'} width={50} height={20} alt="s"/></button>
+                            
+                          </div>
+                          <div className="flex flex-col gap-3 ">
+                            <h1 className="text-[1.3rem] font-semibold">Budget Name:</h1>
+                            <input type="text" className=" h-[3rem] border-4 rounded-xl border-[#2ec4b6] outline-none"/>
                         </div>
-                        <div className="flex flex-col gap-3 ">
-                          <h1 className="text-[1.3rem] font-semibold">Budget Name:</h1>
-                          <input type="text" className=" h-[3rem] border-4 rounded-xl border-[#2ec4b6] outline-none"/>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                          <h1 className="text-[1.3rem] font-semibold">Deposit Starting Amount:</h1>
-                          <input type="number" className=" h-[3rem] border-4 rounded-xl border-[#2ec4b6] outline-none"/>
-                      </div>
-                      <button className="md:w-[19rem] h-[2.5rem] text-[1.1rem] md:ml-[4rem] text-white rounded-xl font-semibold bg-[#2ec4b6]">
-                          Create Budget
-                      </button>
-                      </ScrollAnimation>
+                        <div className="flex flex-col gap-3">
+                            <h1 className="text-[1.3rem] font-semibold">Deposit Starting Amount:</h1>
+                            <input type="number" className=" h-[3rem] border-4 rounded-xl border-[#2ec4b6] outline-none"/>
+                        </div>
+                        <button className="md:w-[19rem] h-[2.5rem] text-[1.1rem] md:ml-[4rem] text-white rounded-xl font-semibold bg-[#2ec4b6]">
+                            Create Budget
+                        </button>
+                        </ScrollAnimation>
+                    </div>
                   </div>
 
                 )}

@@ -10,8 +10,6 @@ import { toast } from "react-toastify";
 export default function Page() {
   const [userData, setUserData] = useState([])
   const [docId, setDocId] = useState("")
-  const [newName, setNewName] = useState("")
-  const [newNumber, setNewNumber] = useState(0)
   const route = useRouter()
 
 
@@ -38,21 +36,7 @@ export default function Page() {
 
       }, [])
 
-      const updateDetails = async() => {
-        try {
-          onAuthStateChanged(auth, async (user) => {
-            const userDoc = doc(db, 'users', user.uid);
-             await updateDoc(userDoc, {
-               name: newName,
-               Number: newNumber
-             })
-             route.push('/account')
-             toast.success('Account details updated')
-            })
-        } catch (error) {
-          toast.error(error)
-        }
-      }
+      
       
     return (
         <div className="md:ml-[25rem] mt-[5rem] text-black">
