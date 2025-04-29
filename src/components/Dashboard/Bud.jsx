@@ -5,10 +5,13 @@ import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db, auth } from '@/firebase-config';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { ScrollAnimation } from '../SlideAnimation';
 
 export default function Page() {
     const [budget, setBudget] = useState([]);
     const [transaction, setTransaction] = useState([])
+    const [show, setShow] = useState(false)
     const currentUser = auth.currentUser;
     const collectionRef = doc(db, "users", currentUser.uid);
     const route = useRouter()
@@ -52,12 +55,36 @@ export default function Page() {
                             <button className=" w-[9rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer" onClick={() => {route.push('/budget')}}>
                                 View Budgets
                             </button>
-                            <button className="border-3 w-[9rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer text-[#2ec4b6] border-[#2ec4b6]" onClick={() => {route.push('/new-budget')}}>
+                            <button className="border-3 w-[9rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer text-[#2ec4b6] border-[#2ec4b6]" onClick={() => {setShow(true)}}>
                                 Add Budget +
                             </button>
                         </div>
                     </div> 
                 </div>
+                 {show && (
+                    <div className='fixed bg-black/50 min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0' onClick={() => {setShow(false)}}>
+                        <ScrollAnimation yfrom={200} onClick={(e) => {e.stopPropagation()}} className='bg-[#cbf3f0] h-[25rem] md:w-[30rem] rounded-2xl flex flex-col gap-5 p-6'>
+                        <div className='flex justify-between'>
+                            <h2 className='text-[2rem] font-semibold'>New Budget</h2>
+                            <button onClick={() => {setShow(false)}} 
+                            className="cursor-pointer"><Image src={'/material-symbols_cancel-outline.svg'} width={50} height={20} alt="s"/></button>
+                            
+                        </div>
+                        <div className="flex flex-col gap-3 ">
+                            <h1 className="text-[1.3rem] font-semibold">Budget Name:</h1>
+                            <input type="text" className=" h-[3rem] border-4 rounded-xl border-[#2ec4b6] outline-none"/>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <h1 className="text-[1.3rem] font-semibold">Deposit Starting Amount:</h1>
+                            <input type="number" className=" h-[3rem] border-4 rounded-xl border-[#2ec4b6] outline-none"/>
+                        </div>
+                        <button className="md:w-[19rem] h-[2.5rem] text-[1.1rem] md:ml-[4rem] text-white rounded-xl font-semibold bg-[#2ec4b6]">
+                            Create Budget
+                        </button>
+                        </ScrollAnimation>
+                    </div>
+
+                )}
                 {/* Budget Card */}
                 <div className='flex flex-col md:flex-row gap-10 items-center justify-between pt-10'>
                 {budget && budget.length > 0 ? (

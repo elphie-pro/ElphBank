@@ -30,7 +30,7 @@ export default function Page() {
   return (
     <div>
       <nav className="bg-[#2ec4b6] pt-4 h-[5rem] p-4 md:hidden block">
-          <div className="w-[10rem] ml-[13rem] mt-[.5rem]">
+          <div className="w-[10rem] ml-[12rem] mt-[.5rem]">
               <Link href="/" className="">
                 <Image
                   src="/Group 5.png"
