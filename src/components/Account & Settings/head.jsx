@@ -16,21 +16,24 @@ export default function Page() {
     const [newName, setNewName] = useState("")
     const [newNumber, setNewNumber] = useState(0)
 
-    const updateDetails = async() => {
+    const updateDetails = async () => {
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
             try {
-              onAuthStateChanged(auth, async (user) => {
-                const userDoc = doc(db, 'users', user.uid);
-                 await updateDoc(userDoc, {
-                   name: newName,
-                   Number: newNumber
-                 })
-                 route.push('/account')
-                 toast.success('Account details updated')
-                })
+                const userDoc = doc(db, "users", user.uid);
+                await updateDoc(userDoc, {
+                name: newName,
+                Number: newNumber,
+                });
+                window.location.reload();
+                toast.success("Account details updated");
             } catch (error) {
-              toast.error(error)
+                toast.error(error);
             }
-          }
+            }
+        });
+    };
+        
     return (
         <div className="md:ml-[18rem] pt-4 text-black">
             <div className="flex justify-between">
@@ -61,7 +64,7 @@ export default function Page() {
                                 <input type="number" className="border-3 h-[2.5rem] border-[#2ec4b6] outline-none rounded-xl" onChange={(e) => {setNewNumber(e.target.value)}}/>  
                             </div>
                             <div className="text-center text-white font-semibold">
-                                <button className="md:w-[19rem] h-[2.5rem] bg-[#2ec4b6] rounded-xl " onClick={updateDetails}>Update Information</button>
+                                <button className="md:w-[19rem] h-[2.5rem] bg-[#2ec4b6] rounded-xl cursor-pointer" onClick={updateDetails}>Update Information</button>
                             </div>  
                         </ScrollAnimation>
                     </div>
