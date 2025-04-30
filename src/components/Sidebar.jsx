@@ -96,25 +96,7 @@ export default function Page() {
               </button>
             </div>
           </div>
-          {/* Sign out */}
-          { show && (
-              <div onClick={() => {setShow(false)}} className="fixed bg-black/50 min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0 text-black">
-                  <div onClick={(e) => {e.stopPropagation()}} className=""> 
-                      <ScrollAnimation yfrom={200} className='bg-[#cbf3f0] h-[11rem] md:w-[25rem] rounded-2xl flex flex-col gap-5 p-6'>
-                        <div className='flex justify-between'>
-                            <h2 className='text-[2rem] font-bold'>Confirm Sign Out</h2>
-                            <button onClick={() => {setShow(false)}} 
-                            className="cursor-pointer"><Image src={'/material-symbols_cancel-outline.svg'} width={50} height={20} alt="s"/></button>    
-                        </div>
-                        <div className="flex justify-between pt-5">
-                            <button className="bg-gray-500 text-white w-[8rem] h-[2rem] font-light rounded-xl text-[1rem] cursor-pointer shadow-[3px_3px_#99b7b5]" onClick={() => {setShow(false)}}>Cancel</button>
-                            <button className="bg-green-300 text-white w-[8rem] h-[2rem] font-light rounded-xl text-[1rem] cursor-pointer shadow-[3px_3px_#99b7b5]" onClick={logOut}>Sign Out</button>
-                        </div>
-                    </ScrollAnimation>
-                      
-                  </div>
-              </div>
-            )}
+         
              
           </nav>
           </div>
@@ -157,6 +139,26 @@ export default function Page() {
                 </div>
               </div>
           </div>
+          
+           {/* Sign out */}
+           { show && (
+              <div onClick={() => {setShow(false)}} className="fixed bg-black/50 min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0 text-black">
+                  <div onClick={(e) => {e.stopPropagation()}} className=""> 
+                      <ScrollAnimation yfrom={200} className='bg-[#cbf3f0] h-[11rem] md:w-[25rem] rounded-2xl flex flex-col gap-5 p-6'>
+                        <div className='flex justify-between'>
+                            <h2 className='text-[2rem] font-bold'>Confirm Sign Out</h2>
+                            <button onClick={() => {setShow(false)}} 
+                            className="cursor-pointer"><Image src={'/material-symbols_cancel-outline.svg'} width={50} height={20} alt="s"/></button>    
+                        </div>
+                        <div className="flex justify-between pt-5">
+                            <button className="bg-gray-500 text-white w-[8rem] h-[2rem] font-light rounded-xl text-[1rem] cursor-pointer shadow-[3px_3px_#99b7b5]" onClick={() => {setShow(false)}}>Cancel</button>
+                            <button className="bg-green-300 text-white w-[8rem] h-[2rem] font-light rounded-xl text-[1rem] cursor-pointer shadow-[3px_3px_#99b7b5]" onClick={logOut}>Sign Out</button>
+                        </div>
+                    </ScrollAnimation>
+                      
+                  </div>
+              </div>
+            )}
     </div>
     
   )}
