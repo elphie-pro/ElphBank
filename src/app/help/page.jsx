@@ -13,7 +13,7 @@ export default function Page() {
     return (
          <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full overflow-hidden min-h-screen'>
             <Sidebar />
-            <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
+            <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 pb-1">
                 <Buttons />
                 {/* copyright */}
         <div className="mt-[6rem] ml-[50rem]">

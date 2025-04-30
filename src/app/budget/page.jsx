@@ -48,7 +48,7 @@ export default function Page() {
     return (
         <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full overflow-hidden min-h-screen'>
             <Sidebar />
-            <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb">
+            <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-0">
                 <h1 className=' md:ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Budgets</h1>
                 <Button />
                 <Budget />
