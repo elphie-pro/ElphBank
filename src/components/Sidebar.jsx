@@ -32,7 +32,7 @@ export default function Page() {
   return (
     <div className="">
       <div>
-      <nav className="bg-[#2ec4b6]  h-[5rem] w-screen px-[2rem] p-4 md:hidden block">
+      <nav className="bg-[#2ec4b6]  h-[5rem] w-screen px-[1.5rem] p-4 md:hidden block">
         <div className="flex justify-between">
           <div className=" pl-[rem] pt-[1rem] md:hidden block  ">
             <button onClick={handleToggle} className=" w-"><Image src='/Group 122.png' width={30} height={50} alt="toggle" className=""/></button>
@@ -115,17 +115,47 @@ export default function Page() {
                   </div>
               </div>
             )}
-                      <div
-                        className={`${
-                          !open ? "hidden" : "block"
-                        } md:hidden bg-[#2EC4B6] shadow-2xl absolute top-16 right-0 w-[10rem] p-8`}
-                      >
-
-                      </div>
+             
           </nav>
           </div>
       </div>
-      
+      <div
+                className={`${
+                  !open ? "hidden" : "block"
+                } bg-[#2ec4b6] h-[45rem] w-1/2 z-10 mt-[4rem] flex flex-col gap-5 pl-4 top-0 left-0 text-black absolute`}
+              >
+                <div className="pt-[7rem] ">
+                    <ul className="flex flex-col gap-[1.8rem] text-white">
+                      <li className={path === '/dashboard' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+                        <Image src='/control panel.svg' width={30} height={10} alt="con"/>
+                        <Link href="/dashboard" className="pl-2 pt-1">Dashboard</Link>
+                      </li>
+                      <li className={path === '/transfer' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+                        <Image src='/Exchange.svg' width={30} height={10} alt="con"/>
+                        <Link href="/transfer" className="pl-2 pt-1">Transfers</Link>
+                      </li>
+                      
+                      <li className={path === '/budget' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+                        <Image src='/Accounting.svg' width={30} height={10} alt="con"/>
+                        <Link href="/budget" className="pl-2 pt-1">Budgets</Link>
+                      </li>
+                      <li className={path === '/history' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+                        <Image src='/Ledger.svg' width={30} height={10} alt="con"/>
+                        <Link href="/history" className="pl-2 pt-1">History</Link>
+                      </li>
+                      <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+                        <Image src='/Help.svg' width={30} height={10} alt="con"/>
+                        <Link href="/" className="pl-2 pt-1">Help</Link>
+                      </li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-[5rem] pt-[12rem] text-white">
+                  <button className="font-semibold flex cursor-pointer" onClick={() => {setShow(true)}}>
+                      <Image src='/Move Up.svg' width={30} height={10} alt="con"/>
+                      <h2 className="pl-2 pt-1">Sign Out</h2>
+                  </button>
+                </div>
+              </div>
           </div>
     </div>
     
