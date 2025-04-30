@@ -63,8 +63,8 @@ export default function Page() {
                                 <p className="font-semibold text-[1.15rem]">New Number:</p>
                                 <input type="number" className="border-3 h-[2.5rem] border-[#2ec4b6] outline-none rounded-xl" onChange={(e) => {setNewNumber(e.target.value)}}/>  
                             </div>
-                            <div className="text-center text-white font-semibold">
-                                <button className="md:w-[19rem] h-[2.5rem] bg-[#2ec4b6] rounded-xl cursor-pointer" onClick={updateDetails}>Update Information</button>
+                            <div className="text-center text-white font-semibold pb-2">
+                                <button className="w-[17rem] h-[2.5rem] bg-[#2ec4b6] rounded-xl cursor-pointer" onClick={updateDetails}>Update Information</button>
                             </div>  
                         </ScrollAnimation>
                     </div>

@@ -40,7 +40,7 @@ export default function Page() {
                 </div>
                 <div className="flex flex-col gap-5 items-center">
                     <p className="text-[1.25rem] text-[#2ec4b6] font-bold">Account Information</p>
-                    <div className="md:w-[30rem] md:h-[15rem] bg-[#2ec4b6] rounded-3xl md:p-10 p-7 shadow-[6px_6px_#99B7B5] flex flex-col gap-6 text-white md:px-[5rem]">
+                    <div className="md:w-[30rem] md:h-[15rem] bg-[#2ec4b6] rounded-3xl md:p-10 p-7 shadow-[6px_6px_#99B7B5] flex flex-col gap-6 px-[3rem] text-white md:px-[5rem]">
                         <div className="flex flex-col md:flex-row justify-between">
                             <p className="font-semibold">Full Name:</p>
                             <p>{userData ? userData.name : 'Nil'}</p>

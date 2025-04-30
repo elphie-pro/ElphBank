@@ -101,10 +101,10 @@ export default function Page() {
           </nav>
           </div>
       </div>
-      <div
+      <ScrollAnimation yfrom={!open ? -200 : 200} to={0}
                 className={`${
                   !open ? "hidden" : "block"
-                } bg-[#2ec4b6] h-[45rem] w-1/2 z-10 mt-[4rem] flex flex-col gap-5 pl-4 top-0 left-0 text-black absolute`}
+                } bg-[#2ec4b6] h-[45rem] w-1/2 z-10 mt-[4rem] flex flex-col gap-5 pl-4 top-0 left-0 text-black absolute `}
               >
                 <div className="pt-[7rem] ">
                     <ul className="flex flex-col gap-[1.8rem] text-white">
@@ -137,7 +137,7 @@ export default function Page() {
                       <h2 className="pl-2 pt-1">Sign Out</h2>
                   </button>
                 </div>
-              </div>
+              </ScrollAnimation>
           </div>
           
            {/* Sign out */}
