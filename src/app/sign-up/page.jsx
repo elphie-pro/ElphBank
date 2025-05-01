@@ -16,6 +16,7 @@ export default function Page() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [user, setUser] = useState(null)
+    const [hide, setHide] = useState(false)
     
     const route = useRouter()
 
@@ -23,6 +24,10 @@ export default function Page() {
         hidden: { opacity: 0 },
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
+
+      const handleToggle = () => {
+        setHide((prev) => !prev)
+      }
 
       const googleCreate = async () => {
         try {
@@ -93,12 +98,14 @@ export default function Page() {
                                     setEmail(e.target.value)
                                 }} className="border-2 border-white w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 rounded-tl-xl font-semibold rounded-br-xl placeholder-[#757575] p-2 outline-none"/>
                                 <br />
-                                <div className="pt-3">
+                                 <div className="pt-3">
                                     <label htmlFor="" className="text-[1rem] font-semibold">Password</label>
                                     <br />
-                                    <input type="password" placeholder="Password" required onChange={(e) => {
+                                    <input type={!hide ? "password" : "text"}  placeholder="Password" required onChange={(e) => {
                                         setPassword(e.target.value)
-                                    }} className="border-2 border-white w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 rounded-tr-xl font-semibold rounded-bl-xl placeholder-[#757575] p-2 outline-none"/>    
+                                    }} className="border-2 border-white w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 rounded-tr-xl font-semibold rounded-bl-xl placeholder-[#757575] p-2 outline-none"/> 
+                                    
+                                    <button className="absolute ml-[-3rem] mt-[.7rem] cursor-pointer" onClick={handleToggle}><Image src={hide ? '/Eye.svg' : '/Eye-closed.svg'} width={30} height={20} alt="w"/></button>  
                                 </div>
                             </div>
                         </div>
