@@ -14,7 +14,7 @@ export default function Page() {
                     <ScrollAnimation yfrom={200} to={0} >
                         <Image src='/Rectangle 31.png' width={350} height={50} alt="background" className=""/>
                         <div className="flex-col gap-5 mt-[-30rem] absolute">
-                            <div className="w-[4.5rem] h-[2.3rem] bg-[#CBF3F0] text-black p-2 ml-[1rem] md:mt-[0rem] mt-8 rounded-3xl"><h3 className="ml-3 -mt-[.1rem] font-bold">One</h3></div>
+                            <div className="w-[4.5rem] h-[2.3rem] bg-[#CBF3F0]  text-black p-2 ml-[1rem] md:mt-[0rem] mt-8 rounded-3xl"><h3 className="ml-3 -mt-[.1rem] font-bold">One</h3></div>
                             <div className="flex flex-col pt-10 pl-6">
                                 <Image src='/fluent-color_savings-32.png' width={130} height={50} alt="pig" />
                                 <div className="flex flex-col text-black font-semibold pt-6 pl-3">

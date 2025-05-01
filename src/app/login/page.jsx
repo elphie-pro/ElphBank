@@ -46,7 +46,7 @@ export default function Page() {
 
     return (
         <>
-        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] w-full min-h-screen">
+        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] w-full min-h-screen dark:bg-">
             <nav className="py-6 px-2 md:px-18 w-[20rem]">
                 <Link href="/">
                     <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo"/>

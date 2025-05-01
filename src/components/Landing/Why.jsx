@@ -7,9 +7,9 @@ import Marquee from "react-fast-marquee";
 export default function Page() {
   const route = useRouter()
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-black">
       <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
-          <h3 className="md:text-[2.8rem] text-[2rem] font-bold text-black text-center">
+          <h3 className="md:text-[2.8rem] text-[2rem] font-bold text-black text-center dark:text-white">
             Why Elph<span className="text-[#2EC4B6]">Bank?</span>
           </h3>
           <div className="flex gap-[4rem] justify-between md:gap-[0rem] md:pt-20 pt-10 items-center flex-col md:flex-row">
