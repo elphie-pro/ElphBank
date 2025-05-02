@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.jsx'
 import Why from '../components/Landing/Why.jsx'
 import Savings from '../components/Landing/Savings.jsx'
 import Feature from '../components/Landing/Feature.jsx'
+import Toggle from '../components/Toggle'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -13,6 +14,9 @@ export default function Home() {
   };
   return (
     <motion.div variants={variants} initial="hidden" animate="show" className='overflow-x-hidden'>
+       <div className='fixed'>
+        <Toggle />
+      </div>
       <Navbar />
       <Started />
       <Why />
