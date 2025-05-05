@@ -82,9 +82,9 @@ export default function Page() {
                 <Image src='/Ledger.svg' width={30} height={10} alt="con"/>
                 <Link href="/history" className="pl-2 pt-1">History</Link>
               </li>
-              <li className={path === '/' ?  "font-bold flex text-underline": "text-white flex text-center"}>
+              <li className={path === '/help' ?  "font-bold flex text-underline": "text-white flex text-center"}>
                 <Image src='/Help.svg' width={30} height={10} alt="con"/>
-                <Link href="/" className="pl-2 pt-1">Help</Link>
+                <Link href="/help" className="pl-2 pt-1">Help</Link>
               </li>
             </ul>
           </div>

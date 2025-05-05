@@ -4,9 +4,10 @@ import { useRouter } from "next/navigation";
 import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
+  // bg-[#2EC4B6]
   const route = useRouter()
   return (
-    <div className="bg-[#2EC4B6] w-full ">
+    <div className="bg-[#2EC4B6]  w-full ">
       <div className="w-full block max-w-[100rem] mx-auto px-4 pb-12 md:pb-0 overflow-hidden">
         <div
           className="flex flex-col md:flex-row md:justify-between pt-18"

@@ -16,7 +16,7 @@ export default function Page() {
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 pb-1">
                 <h1 className=' md:ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>FAQs</h1>
                 <Buttons />
-                <div className='flex justify-between pt-18'>
+                <div className='flex justify-between pt-18 font-black text-black ml-[15rem]'>
             <div className='flex flex-col gap-4'>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, facere recusandae perferendis ducimus dolorum dolor ipsa repellendus similique eligendi dicta fugit quo ipsum itaque non deleniti voluptatum labore voluptatem praesentium!
