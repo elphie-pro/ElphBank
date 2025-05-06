@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <div className="absolute mt-[.5rem] ml-[110em] w-[10rem]">
             <button onClick={() => {setTheme(theme === "light" ? "dark" : "light")}} className="cursor-pointer">
-                <Image src={theme === "light" ? 'Group 33.svg' : 'Group 34.svg'} width={40} height={20} alt="20" className="absolute "/>
+                <Image src={theme === "dark" ? 'Group 33.svg' : 'Group 34.svg'} width={40} height={20} alt="20" className="absolute "/>
                 {/* <Image src='Group 34.svg' width={40} height={20} alt="20" className="absolute rotate-90 scale-0 dark:-rotate-0 dark:scale-100"/> */}
             </button>
         </div>

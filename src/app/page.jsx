@@ -7,7 +7,7 @@ import Feature from '../components/Landing/Feature.jsx'
 import Toggle from '../components/Toggle'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { fetchUserByEmail } from '@/lib/useTransaction'
+// import { fetchUserByEmailAndGetBalance } from '@/lib/useTransaction'
 
 export default function Home() {
   const [email,getEmail] = useState()
