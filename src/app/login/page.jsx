@@ -49,7 +49,8 @@ export default function Page() {
         <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] w-full min-h-screen dark:bg-">
             <nav className="py-6 px-2 md:px-18 w-[20rem]">
                 <Link href="/">
-                    <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo"/>
+                    <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo" className="dark:hidden block"/>
+                    <Image src="/Group 6.svg" width={150} height={38} alt="ElphBank Logo" className="hidden dark:block"/>
                 </Link>
             </nav>
             <div className="w-full block max-w-7xl mx-auto px-4 md:py-18 md:pb-2">
