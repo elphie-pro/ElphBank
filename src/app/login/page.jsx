@@ -56,7 +56,7 @@ export default function Page() {
                 </Link>
                  <div className='absolute md:mt-[-3rem] mt-[-3.5rem] ml-[20rem] md:ml-[100rem] w-[8rem]'>
                         <Toggle />
-                      </div>
+                 </div>
             </nav>
             <div className="w-full block max-w-7xl mx-auto px-4 md:py-18 pt-10 md:pb-2 dark:text-black">
                 <div className=" h-[40rem] md:flex shadow-2xl border border-transparent rounded-br-3xl">
