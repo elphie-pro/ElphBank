@@ -7,6 +7,7 @@ import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "@/firebase-config";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import Toggle from '@/components/Toggle'
 
 export default function Page() {
     const [accountType, setAccountType] = useState("Personal Account")
@@ -38,18 +39,22 @@ export default function Page() {
 
     return (
         <>
-        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] w-full min-h-screen">
+        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] dark:bg-black dark:text-black w-full min-h-screen">
             <nav className="py-6 px-2 md:px-18 w-[20rem]">
                 <Link href="/">
-                    <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo"/>
+                    <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo" className="dark:hidden block"/>
+                    <Image src="/Group 6.svg" width={150} height={38} alt="ElphBank Logo" className="hidden dark:block"/>
                 </Link>
+                <div className='absolute md:mt-[-3rem] mt-[-3.5rem] ml-[20rem] md:ml-[100rem] w-[8rem]'>
+                        <Toggle />
+                 </div>
             </nav>
             <div className="w-full block max-w-7xl mx-auto px-4 md:py-18 md:pb-22">
                 <div className=" h-[40rem] md:flex shadow-2xl border border-transparent rounded-br-3xl">
-                    <div className="md:w-[40rem] h-[40rem] bg-[#eaeaea] bg-opacity-10 border rounded-tl-3xl hidden md:block">
+                    <div className="md:w-[40rem] h-[40rem] bg-[#eaeaea] dark:bg-[#2ec4b6] bg-opacity-10 rounded-tl-3xl hidden md:block">
                             <Image src="/Mirae_Asset_Mutual_Fund_launches_Banking___Financial_Services_Fund-removebg-preview (1) 1.png" width={500} height={38} alt="ElphBank Logo" className="ml-[4rem] mt-[6rem]"/>
                         </div>
-                    <div className="md:w-[40rem] h-[40rem] bg-[#71D5CB] bg-opacity-10 border border-transparent  rounded-br-3xl">
+                    <div className="md:w-[40rem] h-[40rem] bg-[#71D5CB] dark:bg-[#cbf3f0] bg-opacity-10 border border-transparent  rounded-br-3xl">
                         <div className="flex py-[3rem] md:px-[7rem] px-7 flex-col justify-center">
                             <h2 className="font-bold text-2xl md:text-3xl ">Complete Regsitration</h2>
                             <p className="font-semibold text-[1rem] md:text-[1rem] flex gap-1"><span className="hidden">Welcome new user! </span>Please fill in the adeqate details.</p>
@@ -58,7 +63,7 @@ export default function Page() {
                                 <br />
                                 <select onChange={(e) => {
                                     setAccountType(e.target.value)
-                                }}className="w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 border-2 border-white rounded-tl-xl rounded-br-xl bg-white p-2 font-medium text-[#757575] focus:outline-none focus:border-none focus:border-b-2 focus:">
+                                }}className="w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 border-2 border-white dark:border-black  rounded-tl-xl rounded-br-xl bg-white p-2 font-medium text-[#757575] focus:outline-none focus:border-none focus:border-b-2 focus:">
                                     <option className=" text-[#757575] font-medium">Personal Account</option>
                                     <option className=" text-[#757575] font-medium">Business Account</option>
                                     <option className=" text-[#757575] font-medium">Savings Account</option>
@@ -69,20 +74,20 @@ export default function Page() {
                                     <br />
                                     <input type="number" placeholder="min ₦50,000" required onChange={(e) => {
                                         setDeposit(e.target.value)
-                                    }} className="border-2 border-white w-[17rem] md:w-[23rem] h-[2.5rem] mt-2 rounded-tr-xl font-medium rounded-bl-xl placeholder-[#757575] p-2 outline-none"/>    
+                                    }} className="border-2 border-white w-[17rem] dark:border-black md:w-[23rem] h-[2.5rem] mt-2 rounded-tr-xl font-medium rounded-bl-xl placeholder-[#757575] p-2 outline-none"/>    
                                 </div>
                         </div>
                         <div className="pt-10 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={complete}>Complete Registration </button>                        </div>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] dark:bg-black bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={complete}>Complete Registration </button>                        </div>
                         <div className="pt-4 md:ml-16 ml-7">
-                            <p className="text-white font-semibold text-[.9rem]">Already have an account? <Link href="/login" className="text-black">Sign In</Link></p>
+                            <p className="text-white dark:text-black font-semibold text-[.9rem]">Already have an account? <Link href="/login" className="text-black dark:text-[#2ec4b6]">Sign In</Link></p>
                         </div>
                     </div>
                  </div>
                 </div>    
             </div>    
-            <div className="md:pt-[8rem] pt-18 md:pl-16 pl-4">
-                        <p className="md:text-[.9rem] text-[.7rem] text-[white] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
+            <div className="md:pt-[5rem] pt-18 md:pl-16 pl-4">
+                <p className="md:text-[.9rem] text-[.7rem] text-[white] font-semibold">© 2025 ElphBank Technologies. All rights reserved</p>
             </div>
         </motion.div>
         </>
