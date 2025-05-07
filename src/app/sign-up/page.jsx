@@ -2,8 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { db } from "@/firebase-config";
-import { auth, signInWithPopup, provider } from "@/firebase-config";
+// import { db } from "@/firebase-config";
+// import { auth, signInWithPopup, provider } from "@/firebase-config";
 import { setDoc, doc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { motion } from "framer-motion";
