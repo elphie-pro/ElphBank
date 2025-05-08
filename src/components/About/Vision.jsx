@@ -3,12 +3,12 @@ import Image from "next/image";
 import { ScrollAnimation } from "../SlideAnimation";
 export default function Page() {
     return (
-    <div className="bg-white overflow-hidden">
+    <div className="bg-white dark:bg-[#161616] overflow-hidden">
         <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-3 ">
             <div className="flex flex-col md:flex-row gap-4 justify-between pt-18">
                 <div className="flex flex-col items-center gap-9">
                     <ScrollAnimation from={-200} to={0} className="md:w-[35rem] md:h-[13rem] h-[16rem] rounded-3xl bg-[#cbf3f0] items-center flex flex-col gap-3 md:p-5">
-                        <div className="w-[8rem] h-[2.3rem] bg-white text-[#2ec4b6] p-2 md:mt-[0rem] mt-8 -ml-[12rem] rounded-3xl">
+                        <div className="w-[8rem] h-[2.3rem] bg-white text-[#2ec4b6] p-2 md:mt-[0rem] mt-8 -ml-[18rem] rounded-3xl">
                             <h3 className="ml-3 -mt-[.1rem] font-bold">Our Vision</h3>
                         </div>
                         <div className="px-4">
@@ -20,7 +20,7 @@ export default function Page() {
                         
                     </ScrollAnimation>
                     <ScrollAnimation from={200} to={0} className="md:w-[35rem] md:h-[13rem] h-[16rem] rounded-3xl bg-[#cbf3f0] items-center flex flex-col gap-3 md:p-5">
-                        <div className="w-[8rem] h-[2.3rem] bg-white text-[#2ec4b6] p-2 md:mt-[0rem] mt-8 -ml-[12rem] rounded-3xl">
+                        <div className="w-[8rem] h-[2.3rem] bg-white text-[#2ec4b6] p-2 md:mt-[0rem] mt-8 -ml-[18rem] rounded-3xl">
                             <h3 className="ml-2 -mt-[.1rem] font-bold">Our Mission</h3>
                         </div>
                         <div className="px-4">
@@ -32,7 +32,7 @@ export default function Page() {
                         
                     </ScrollAnimation>
                     <ScrollAnimation from={-200} to={0} className="md:w-[35rem] md:h-[15rem] h-[21.5rem] rounded-3xl bg-[#2ec4b6] items-center flex flex-col gap-3 md:p-5">
-                        <div className="w-[8rem] h-[2.3rem] bg-white text-[#2ec4b6] p-2 md:mt-[0rem] mt-8 -ml-[12rem] rounded-3xl">
+                        <div className="w-[8rem] h-[2.3rem] bg-white text-[#2ec4b6] p-2 md:mt-[0rem] mt-8 -ml-[18rem] rounded-3xl">
                             <h3 className="ml-3 -mt-[.1rem] font-bold">Our History</h3>
                         </div>
                         <div className="px-4">

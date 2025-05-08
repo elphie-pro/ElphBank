@@ -15,25 +15,28 @@ export default function Page() {
                     <ScrollAnimation yfrom={200} to={0} className="">
                         <Image src='/Group 18.svg' width={0} height={20} alt="about" className="md:w-[35rem] hidden md:block"/>
                     </ScrollAnimation>
-                    <ScrollAnimation from={200} to={0} className="md:w-[50rem] w-[21.5rem] h-[47rem] md:h-[33rem] bg-[#cbf3f0] rounded-3xl pt-7 p-2 pl-2 md:pl-28 flex flex-col gap-5 text-black">
+                    <ScrollAnimation from={200} to={0} className="md:w-[50rem] w-[21.5rem] h-[47rem] md:h-[33rem] bg-[#cbf3f0] dark:bg-[#161616] rounded-3xl pt-7 p-2 pl-2 md:pl-28 flex flex-col gap-5 text-black">
                         <div className="flex flex-col gap-3">
-                        <h1 className="text-[#2ec4b6] text-[1.3rem]">About <span className="font-bold">Elph<span className="text-black">Bank</span></span></h1>
-                        <h1 className="text-[2.8rem] leading-tight">Smart Strategies for <br className="hidden md:block"/>  Maximizing Your Savings</h1>
+                        <h1 className="text-[#2ec4b6] text-[1.3rem]">About <span className="font-bold">Elph<span className="text-black dark:text-white">Bank</span></span></h1>
+                        <h1 className="text-[2.8rem] leading-tight dark:text-white">Smart Strategies for <br className="hidden md:block"/>  Maximizing Your Savings</h1>
                         <p className="text-[1.15rem] text-[#818f96]">Building a strong financial future requires strategic savings <br className="hidden md:block"/>
                             habits that ensure long-term prosperity. By implementing <br className="hidden md:block"/>
                             the right approaches, you can grow your savings effortlessly <br className="hidden md:block"/>
                             while securing financial stability.</p>
                             <div className="flex flex-col">
                                 <div className="pt-3 flex gap-3">
-                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" />
+                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" className="block dark:hidden"/>
+                                    <Image src='/ri_checkbox-circle-fill.svg' width={25} height={20} alt="check" className="hidden dark:block"/>
                                     <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Reduce Unnecessary Expenses</h4>
                                 </div>
                                 <div className="pt-3 flex gap-3">
-                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={10} alt="check" />
+                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" className="block dark:hidden"/>
+                                    <Image src='/ri_checkbox-circle-fill.svg' width={25} height={20} alt="check" className="hidden dark:block"/>
                                     <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Leverage High-Interest Accounts</h4>
                                 </div>
                                 <div className="pt-3 flex gap-3">
-                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" />
+                                    <Image src='/ri_checkbox-circle-fill.png' width={25} height={20} alt="check" className="block dark:hidden"/>
+                                    <Image src='/ri_checkbox-circle-fill.svg' width={25} height={20} alt="check" className="hidden dark:block"/>
                                     <h4 className="md:text-[1rem] text-[.9rem] text-[#818f96]">Take Advantage of Rewards & Discounts</h4>
                                 </div>
                             </div>

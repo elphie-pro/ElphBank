@@ -3,7 +3,7 @@ import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
     return (
-        <div className="bg-[#2ec4b6] dark:bg-black overflow- ">
+        <div className="bg-[#2ec4b6] dark:bg-[#161616] overflow- ">
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-3 ">
                 <div className=" md:h-[40rem] rounded-2xl flex flex-col items-center justify-between md:flex-row px-[3.5rem] bg-[#cbf3f0] dark:bg-[#2ec4b6] p-8 text-black">
                     <ScrollAnimation yfrom={-200} to={0}>

@@ -5,7 +5,7 @@ import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
     return (
-        <div className="bg-white dark:bg-black overflow-hidden text-black dark:text-white">
+        <div className="bg-white dark:bg-[#161616] overflow-hidden text-black dark:text-white">
             <div className="w-full block max-w-[100rem] mx-auto px-4 md:py-12 pb-4 ">
                     <div className="text-center">
                         <h1 className="md:text-[3.2rem] text-[2.8rem] font-bold">All features in one web app</h1>

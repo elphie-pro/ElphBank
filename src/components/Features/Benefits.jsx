@@ -3,7 +3,7 @@ import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
     return (
-        <div className="bg-[#2ec4b6] dark:bg-black overflow- ">
+        <div className="bg-[#2ec4b6] dark:bg-[#161616] overflow- ">
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
                 <ScrollAnimation from={200} to={0} className="flex flex-col md:flex-row justify-between">
                     <h1 className="text-[3rem] font-semibold leading-tight">Benefits of Smarter <br className="hidden md:block"/> Financial Management</h1>

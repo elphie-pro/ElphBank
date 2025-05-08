@@ -42,12 +42,12 @@ export default function Page() {
           <div className="hidden md:block">
             <div className="flex gap-5">
               <button
-                className="border-2 w-[8rem] h-[2.5rem] text-center font-semibold rounded-[0.6rem] cursor-pointer" onClick={() => route.push('/login')}
+                className="border-2 w-[8rem] h-[2.5rem] text-center dark:border-[#161616] dark:text-[#161616] font-semibold rounded-[0.6rem] cursor-pointer" onClick={() => route.push('/login')}
               >
                 Sign In
               </button>
               <button
-                className=" w-[8rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-white text-[#2ec4b6] cursor-pointer" onClick={() => route.push('/sign-up')}
+                className=" w-[8rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-white dark:bg-[#161616] text-[#2ec4b6] cursor-pointer" onClick={() => route.push('/sign-up')}
               >
                 Sign Up
               </button>

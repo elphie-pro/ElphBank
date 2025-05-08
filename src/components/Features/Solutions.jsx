@@ -6,18 +6,18 @@ import { useRouter } from "next/navigation";
 export default function Page() {
     const route = useRouter()
     return (
-        <div className="bg-[#2ec4b6] dark:bg-blak overflow-">
+        <div className="bg-[#2ec4b6] overflow-">
                         <ScrollAnimation from={-200} to={0}>
                                 <Image src='/Group 177.svg' width={10} height={20} alt="about" className="md:w-[130rem] h-[20rem] w-[100rem] hidden md:block"/>
                                 <Image src='/Group 199.svg' width={10} height={20} alt="about" className="w-[130rem] md:hidden block"/>
                             </ScrollAnimation>
                       <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-24 ">
-                        <div className="h-[92rem] md:h-[38.5rem] rounded-2xl flex flex-col items-center justify-between md:flex-row md:px-[3.5rem] bg-[#cbf3f0] dark:bg-black p-8 text-black">
+                        <div className="h-[92rem] md:h-[38.5rem] rounded-2xl flex flex-col items-center justify-between md:flex-row md:px-[3.5rem] bg-[#cbf3f0] dark:bg-[#161616] p-8 text-black">
                             <ScrollAnimation yfrom={200} to={0}>
                                  <Image src='/Rectangle 67.svg' width={0} height={20} alt="about" className="md:w-[23rem] w-full"/>
                             </ScrollAnimation>
                             <ScrollAnimation from={200} to={0} className="pt-4">
-                                <h1 className="text-[2.8rem] font-semibold leading-tight text-white">Smart Financial Solutions <br className="hidden md:block"/> for a Better Future</h1>
+                                <h1 className="text-[2.8rem] font-semibold leading-tight dark:text-white">Smart Financial Solutions <br className="hidden md:block"/> for a Better Future</h1>
                                 <p className="text-[#818f96] text-[1.15rem] pt-8">Manage your money effortlessly with our all-in-one financial <br className="hidden md:block"/>
                                     platform. Enjoy fee-free overdrafts, high-yield savings, and <br className="hidden md:block"/>
                                     commission-free investments, all in a 100% secure system with <br className="hidden md:block"/>
