@@ -46,7 +46,6 @@ export default function Page() {
                             <button className="text-white w-[10rem] h-[3rem] bg-[#2ec4b6] p-3 rounded-2xl">Learn More</button>
                         </div> 
                     </ScrollAnimation>
-                    
                 </div>
               </div>
             </div>

@@ -71,7 +71,7 @@ export default function Page() {
 
     return (
         <>
-        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] dark:bg-black w-full min-h-screen">
+        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] dark:bg-[#161616] w-full min-h-screen">
             <nav className="py-6 px-2 md:px-18 w-[20rem]">
                 <Link href="/">
                     <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo" className="dark:hidden block"/>
@@ -115,8 +115,8 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="pt-6 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 dark:bg-black border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={passwordCreate}>Proceed</button>
-                            <button className=" cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 dark:bg-black border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6] flex gap-2 p-1" onClick={googleCreate}><Image src="/devicon_google.png" width={30} height={38} alt="ElphBank Logo" className="ml-8  md:ml-[4.5rem]"/> <span className="mt-1">Sign up with Google?</span></button>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 dark:bg-[#161616] border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={passwordCreate}>Proceed</button>
+                            <button className=" cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] bg-white border-4 dark:bg-[#161616] border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6] flex gap-2 p-1" onClick={googleCreate}><Image src="/devicon_google.png" width={30} height={38} alt="ElphBank Logo" className="ml-8  md:ml-[4.5rem]"/> <span className="mt-1">Sign up with Google?</span></button>
                         </div>
                         <div className="pt-4 md:ml-16 ml-7">
                             <p className="text-white dark:text-black font-semibold text-[.9rem]">Already have an account? <Link href="/login" className="text-black dark:text-[#2ec4b6]">Sign In</Link></p>

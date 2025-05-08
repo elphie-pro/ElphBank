@@ -39,7 +39,7 @@ export default function Page() {
 
     return (
         <>
-        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] dark:bg-black dark:text-black w-full min-h-screen">
+        <motion.div variants={variants} initial="hidden" animate="show" className="bg-[#2EC4B6] dark:bg-[#161616] dark:text-black w-full min-h-screen">
             <nav className="py-6 px-2 md:px-18 w-[20rem]">
                 <Link href="/">
                     <Image src="/Group 5.png" width={150} height={38} alt="ElphBank Logo" className="dark:hidden block"/>
@@ -78,7 +78,7 @@ export default function Page() {
                                 </div>
                         </div>
                         <div className="pt-10 flex flex-col gap-4">
-                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] dark:bg-black bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={complete}>Complete Registration </button>                        </div>
+                            <button className="cursor-pointer w-[17rem] md:w-[23rem] h-[3rem] dark:bg-[#161616] bg-white border-4 border-[#2EC4B6] rounded-tl-xl font-semibold rounded-br-xl text-[#2EC4B6]" onClick={complete}>Complete Registration </button>                        </div>
                         <div className="pt-4 md:ml-16 ml-7">
                             <p className="text-white dark:text-black font-semibold text-[.9rem]">Already have an account? <Link href="/login" className="text-black dark:text-[#2ec4b6]">Sign In</Link></p>
                         </div>
