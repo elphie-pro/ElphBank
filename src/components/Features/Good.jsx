@@ -3,13 +3,13 @@ import { ScrollAnimation } from "../SlideAnimation";
 
 export default function Page() {
     return (
-        <div className="bg-[#2ec4b6] overflow- ">
+        <div className="bg-[#2ec4b6] dark:bg-black overflow- ">
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-3 ">
-                <div className=" md:h-[40rem] rounded-2xl flex flex-col items-center justify-between md:flex-row px-[3.5rem] bg-[#cbf3f0] p-8 text-black">
+                <div className=" md:h-[40rem] rounded-2xl flex flex-col items-center justify-between md:flex-row px-[3.5rem] bg-[#cbf3f0] dark:bg-[#2ec4b6] p-8 text-black">
                     <ScrollAnimation yfrom={-200} to={0}>
                         <Image src='/Rectangle 71.svg' width={0} height={20} alt="about" className="md:w-[23rem] w-full"/>
                     </ScrollAnimation>
-                    <ScrollAnimation from={200} to={0} className="pt-14">
+                    <ScrollAnimation from={200} to={0} className="pt-14 ">
                         <h3 className="md:text-[3.2rem] text-[1.9rem] font-semibold">Relax, You are <br className="hidden md:block"/> in Good Hands</h3>
                         <div className="flex gap-10">
                             <div className="flex-col gap-3">

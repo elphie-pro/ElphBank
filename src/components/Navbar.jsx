@@ -13,7 +13,7 @@ export default function Page() {
     setOpen((prev) => !prev);
   };
   return (
-         <div className="bg-[#2EC4B6] ">
+         <div className={path === '/feature' ? 'bg-black' : 'bg-[#2ec4b6]'}>
       <div className="w-full block max-w-[100rem] mx-auto px-4 md:pb-2 ">
         <nav className="py-6 flex justify-between">
           <div className="w-[10rem] ">

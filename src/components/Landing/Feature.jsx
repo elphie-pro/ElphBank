@@ -59,7 +59,7 @@ export default function Page() {
                                     <ScrollAnimation yfrom={200} to={0} className="w-[7.5rem] h-[7.5rem] bg-[#cbf3f0] dark:bg-[#2ec4b6] rounded-[120rem] p-4">
                                         <div className="flex flex-col ">
                                             <Image src='/pepicons-pencil_internet.png' width={50} height={50} alt="send" className="ml-[1.2rem] dark:hidden block"/>
-                                            <Image src='/pepicons-pencil_internet.svg' width={50} height={50} alt="send" className="ml-[1.2rem] hidden darl:block"/>
+                                            <Image src='/pepicons-pencil_internet.svg' width={50} height={50} alt="send" className="ml-[1.2rem] hidden dark:block"/>
                                             <h2 className="pt-4 font-bold">Internet</h2>
                                         </div>
                                     </ScrollAnimation>
