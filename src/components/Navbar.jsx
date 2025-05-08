@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Toggle from '@/components/Toggle'
 
 export default function Page() {
   const [open, setOpen] = useState(false);
@@ -55,7 +56,7 @@ export default function Page() {
           </div>
           {/* mobile navbar */}
             <button onClick={handleToggle} className="md:hidden block"><Image src='/Group 122.png' width={30} height={50} alt="toggle"/></button>
-            <div className={`${ !open ? "hidden" : "block" } md:hidden bg-[#2EC4B6] shadow-2xl absolute top-16 right-0 w-[24rem] p-8`}>
+            <div className={`${ !open ? "hidden" : "block" } md:hidden bg-[#2EC4B6] shadow-2xl absolute top-16 right-0 w-screen p-8 `}>
               <ul className="flex flex-col gap-5 text-black">
                 <li className={path === '/' ?  "font-bold w-[5rem] pl-4 pt-1 h-[2rem] bg-[#cbf3f0] -mt-1 rounded-xl": "text-white "}>
                   <Link href="/">Home</Link>
@@ -80,6 +81,10 @@ export default function Page() {
                     Sign Up
                   </button>
                 </div>
+                
+                <div className='ml-[1rem]'>
+                          <Toggle />
+                        </div>
               </div>
             </div>
         </nav>
