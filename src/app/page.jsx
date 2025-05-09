@@ -21,6 +21,9 @@ export default function Home() {
   }
   return (
     <motion.div variants={variants} initial="hidden" animate="show" className='overflow-x-hidden'>
+      <div className='absolute mt-[.5rem] ml-[110em] w-[8rem]'>
+              <Toggle />
+      </div>
       <Navbar />
       <Started />
       <Why />
