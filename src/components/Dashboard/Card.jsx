@@ -10,7 +10,7 @@ export default function Page({ bud }) {
       <div className="md:w-[10rem] h-[2rem] bg-[#2ec4b6] rounded-3xl text-center text-white pt-1">
           <h2>{bud.budgetName}:</h2>
         </div>
-        <div className="p-4 pt-8">
+        <div className="p-4 pt-8 dark:text-black">
           <h2>Starting Balance: <span className="font-bold">₦ {bud.startingAmount ? bud.startingAmount.toLocaleString() : bud.startingAmount}</span></h2>
           <h2>Current Balance: <span className="font-bold">₦ {bud.currentAmount ? bud.currentAmount.toLocaleString() : bud.currentAmount}</span></h2>
         </div>

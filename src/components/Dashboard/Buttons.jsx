@@ -1,16 +1,21 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Toggle from '@/components/Toggle'
 
 export default function Page() {
     const route = useRouter()
     const [showm, setShowm] = useState(false)
 
     return (
-        <div className="text-black ml-[90.5rem] pt-[1rem] pb-[2rem] hidden md:block">
+        <div className="text-black ml-[87.5rem] pt-[1rem] pb-[2rem] hidden md:block">
             <div className="flex gap-5">
                 <button  className="cursor-pointer" onClick={() => {setShowm(true)}}><Image src={'/Group 25.svg'} width={50} height={20} alt="s"/></button>
                 <button className="cursor-pointer" onClick={() => {route.push('/account')}}><Image src={'/Group 28.svg'} width={50} height={20} alt="s"/></button>
+                <div className="mt-[-.7rem]">
+                   <Toggle /> 
+                </div>
+                
                 { showm && (
                     <div onClick={() => {setShowm(false)}} className="fixed bg-black/50 min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0 ">
                         <div onClick={(e) => {e.stopPropagation()}} className="bg-white p-4 relative"> 

@@ -30,9 +30,9 @@ export default function Page() {
         fetchUserData();
       }, [])
     return (
-        <div className="text-black md:ml-[15rem] flex justify-center md:justify-start">
+        <div className="text-black  md:ml-[15rem] flex justify-center md:justify-start">
             <div className="flex flex-col gap-14 items-center">
-                <h3 className="text-[1.3rem] font-bold">Your Balance is ₦{userData && userData.balance ? userData.balance.toLocaleString() : 'Name'}<span className="text-[#818f96]">.25</span></h3>
+                <h3 className="text-[1.3rem] font-bold dark:text-white">Your Balance is ₦{userData && userData.balance ? userData.balance.toLocaleString() : 'Name'}<span className="text-[#818f96]">.25</span></h3>
                 <div className="pt-8">
                     <Image src='/Group 23.svg' width={300} height={10} alt="pic"/>
                     <div className="absolute mt-[-5.5rem] ml-4 text-white">

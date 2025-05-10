@@ -35,7 +35,7 @@ export default function Page() {
       getBudget();
     }, []);
     return (
-        <div className="text-black flex flex-col gap-10">
+        <div className="text-black dark:text-white flex flex-col gap-10">
             {/* Quick Transfer */}
             <div className='pt-10 md:pt-0'>
                 <h1 className="text-[1.3rem] font-bold">Quick Transfer</h1> 
