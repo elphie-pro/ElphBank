@@ -40,8 +40,8 @@ export default function Page() {
             <div className='pt-10 md:pt-0'>
                 <h1 className="text-[1.3rem] font-bold">Quick Transfer</h1> 
                 <div className="flex flex-col gap-5 md:flex-row items-center pt-10">
-                    <input type="text" placeholder="Enter Account id or Email" className="w-[19rem] md:w-[24rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg"/>
-                    <input type="number" placeholder="Enter Amount" className="w-[19rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg"/>
+                    <input type="text" placeholder="Enter Account id or Email" className="w-[19rem] md:w-[24rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg placeholder-[#757575]"/>
+                    <input type="number" placeholder="Enter Amount" className="w-[19rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg placeholder-[#757575]"/>
                     <button className="w-[2.5rem] h-[2.5rem] bg-[#2ec4b6] text-white rounded-lg text-[1.5rem] hidden md:block">&gt;</button>
                     <button className="w-[19rem] h-[2.5rem] bg-[#2ec4b6] text-white rounded-lg font-semibold md:hidden block">Transfer</button>
                 </div>
@@ -62,7 +62,7 @@ export default function Page() {
                     </div> 
                 </div>
                  {show && (
-                    <div className='fixed bg-black/50 min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0' onClick={() => {setShow(false)}}>
+                    <div className='fixed bg-black/50 min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0 dark:text-black' onClick={() => {setShow(false)}}>
                         <ScrollAnimation yfrom={200} onClick={(e) => {e.stopPropagation()}} className='bg-[#cbf3f0] h-[25rem] md:w-[30rem] rounded-2xl flex flex-col gap-5 p-6'>
                         <div className='flex justify-between'>
                             <h2 className='text-[2rem] font-semibold'>New Budget</h2>
