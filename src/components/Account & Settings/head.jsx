@@ -8,6 +8,7 @@ import { auth, db } from "@/firebase-config";
 import { doc, updateDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { ScrollAnimation } from "../SlideAnimation";
+import Toggle from '@/components/Toggle'
 
 export default function Page() {
     const route = useRouter()
@@ -40,6 +41,9 @@ export default function Page() {
                 <div className="flex gap-5">
                     <button  className="cursor-pointer" onClick={() => {route.back()}}><Image src={'/Group 31.svg'} width={45} height={20} alt="s"/></button>
                     <button className={path === "/account" ? "cursor-pointer" : "hidden"}  onClick={() => {setShow(true)}}><Image src={'/Group 26.svg'} width={50} height={20} alt="s"/></button>
+                    <div className="mt-[-.7rem]">
+                        <Toggle /> 
+                    </div>
                 </div>
                 <div>
                         <h1 className="md:text-[2.3rem] text-[2rem] text-[#2ec4b6] font-bold">My Account</h1>

@@ -12,7 +12,7 @@ export default function Page() {
         show: { opacity: 1, transition: { staggerChildren: 0.25 } },
       };
     return (
-         <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white w-full overflow-hidden min-h-screen'>
+         <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white dark:bg-[#161616] w-full overflow-hidden min-h-screen'>
             <Sidebar />
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 md:pb-2">
                 <Header />
