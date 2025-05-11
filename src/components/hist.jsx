@@ -34,7 +34,7 @@ export default function Page() {
       getBudget();
     }, [user]);
     return (
-        <div className="text-black md:ml-[18rem] mt-[5rem] md:mt-[2rem]">
+        <div className="text-black dark:text-white md:ml-[18rem] mt-[5rem] md:mt-[2rem]">
             <div className='flex flex-col gap-5'>
                 <div className='flex justify-between pt-4 text-[#818f96]'>
                     <p className='text-[.9rem] hidden md:block'>Name of transaction</p>
