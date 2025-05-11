@@ -60,7 +60,7 @@ export default function Page() {
         <Button />
         <Transfer />
 
-        <div className="mt-[8rem] md:ml-[72rem]">
+        <div className="mt-[3rem] md:ml-[75rem] pb-2">
           <p className="md:text-[.9rem] text-[.8rem] text-[#2EC4BE] font-semibold">
             © 2025 ElphBank Technologies. All rights reserved
           </p>

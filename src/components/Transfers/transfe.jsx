@@ -21,7 +21,7 @@ export default function Page() {
   };
 
   return (
-    <form onSubmit={handleTransfer} className="text-black dark:text-white md:ml-[32rem] mt-[5rem]">
+    <form onSubmit={handleTransfer} className="text-black dark:text-white md:ml-[32rem] mt-[2rem]">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h2 className="text-[1.2rem] text-[#2ec4b6] font-semibold">Sender Email</h2>
