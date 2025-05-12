@@ -39,7 +39,7 @@ export default function Page() {
             {/* Quick Transfer */}
             <div className='pt-10 md:pt-0'>
                 <h1 className="text-[1.3rem] font-bold">Quick Transfer</h1> 
-                <div className="flex flex-col gap-5 md:flex-row items-center pt-10">
+                <div className="flex flex-col gap-5 md:flex-row items-center pt-10 dark:text-[#757575]">
                     <input type="text" placeholder="Enter Account id or Email" className="w-[19rem] md:w-[24rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg placeholder-[#757575]"/>
                     <input type="number" placeholder="Enter Amount" className="w-[19rem] p-4 h-[2.5rem] bg-[#f6f6f6] rounded-lg placeholder-[#757575]"/>
                     <button className="w-[2.5rem] h-[2.5rem] bg-[#2ec4b6] text-white rounded-lg text-[1.5rem] hidden md:block">&gt;</button>
