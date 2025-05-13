@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function Page() {
     const route = useRouter()
     return (
-        <div className="bg-[#2ec4b6] overflow-">
+        <div className="bg-[#2ec4b6] overflow-x-hidden">
                         <ScrollAnimation from={-200} to={0}>
                                 <Image src='/Group 177.svg' width={10} height={20} alt="about" className="md:w-[130rem] h-[20rem] w-[100rem] hidden md:block"/>
                                 <Image src='/Group 199.svg' width={10} height={20} alt="about" className="w-[130rem] md:hidden block"/>
