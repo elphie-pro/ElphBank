@@ -14,7 +14,9 @@ export default function Page() {
          <motion.div variants={variants} initial="hidden" animate="show" className=' bg-white dark:bg-[#161616] w-full overflow-hidden min-h-screen'>
             <Sidebar />
             <div className="w-full block max-w-[100rem] mx-auto px-4 py-8 pb-1">
-                <h1 className=' md:ml-[20rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>FAQs</h1>
+                <h1 className=' md:ml-[15rem] mt-[1rem] absolute text-[2.3rem] text-[#2ec4b6] font-bold'>Your Questions <br /> Resolved in One Place</h1>
+                <p>Here you’ll get a brief explanation of each page available and  <br />
+                    where you can get certain features</p>
                 <Buttons />
                 <div className='flex justify-between pt-18 font-black text-black dark:text-white ml-[15rem]'>
             <div className='flex flex-col gap-4'>
