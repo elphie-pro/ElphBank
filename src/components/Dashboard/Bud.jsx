@@ -50,8 +50,8 @@ export default function Page() {
             <div className="pt-6">
                 <div className="flex  justify-between">
                      <h1 className="text-[1.3rem] font-bold">Budgets</h1>
-                     <div className='hidden md:block'>
-                        <div className="flex gap-5 ">
+                     <div className=''>
+                        <div className="flex flex-col md:flex-row mt-[4rem] gap-5">
                             <button className=" w-[9rem] h-[2.5rem] font-semibold text-center rounded-[0.6rem] bg-[#2ec4b6] text-[white] cursor-pointer" onClick={() => {route.push('/budget')}}>
                                 View Budgets
                             </button>
