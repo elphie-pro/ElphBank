@@ -22,7 +22,7 @@ export default function Page({ bud }) {
                 <div onClick={(e) => {e.stopPropagation()}} className=""> 
                    <ScrollAnimation yfrom={200} className='bg-[#cbf3f0] h-[18rem] md:w-[30rem] rounded-2xl flex flex-col gap-5 p-6'>
                       <div className='flex justify-between'>
-                          <h2 className='text-[2rem] font-bold'>Delete Budget?</h2>
+                          <h2 className='text-[2rem] text-black font-bold'>Delete Budget?</h2>
                           <button onClick={() => {setShow(false)}} 
                           className="cursor-pointer"><Image src={'/material-symbols_cancel-outline.svg'} width={50} height={20} alt="s"/></button>    
                       </div>

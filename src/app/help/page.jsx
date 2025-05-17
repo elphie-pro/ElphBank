@@ -40,17 +40,7 @@ export default function Page() {
 
 
             </div>
-            <div className='flex flex-col gap-4'>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, facere recusandae perferendis ducimus dolorum dolor ipsa repellendus similique eligendi dicta fugit quo ipsum itaque non deleniti voluptatum labore voluptatem praesentium!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam laudantium exercitationem dignissimos eos illo quasi libero distinctio natus explicabo. Deserunt veniam hic culpa sit, itaque consectetur, in illum qui, porro sequi quos et nemo quia voluptatum molestias. Tenetur expedita necessitatibus architecto libero totam, quas fugit labore laboriosam iusto illum.
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora enim a, sit iure repellendus dolore accusantium culpa qui beatae doloremque mollitia non accusamus, esse aperiam excepturi praesentium explicabo atque similique itaque? Ea nostrum officiis distinctio quae quasi soluta aspernatur tempora, perspiciatis nihil sapiente, dignissimos similique ipsa libero corporis sit doloribus recusandae maiores inventore vel tempore explicabo minima? Nemo veritatis iste iure, sed fugiat non vero soluta et ratione libero magni? Repudiandae sint nesciunt non doloribus eaque hic quos possimus dolorum, excepturi molestiae fugiat rem, obcaecati eum. Cum possimus soluta doloremque?</p>
-
-
-            </div>
+          
             </div>
                 {/* copyright */}
         <div className="mt-[3rem] ml-[50rem]">
